@@ -32,169 +32,191 @@ interface MenuItem {
 const menuData: Record<MenuCategory, MenuItem[]> = {
   "Signature": [
     {
-      name: "Kame's Trust Me",
+      name: "Chef's Trust Me 49",
       nameJp: "おまかせ",
-      description: "Chef's omakase selection served with miso soup and fresh seasonal salad. Let the chef guide your experience.",
-      price: "Market Price",
+      description: "Thinly sliced hamachi, yellowtail, toro, salmon, spicy tuna, scallop, and eel with special spicy sauce.",
+      price: "$49",
       image: SUSHI_PLATTER,
       badge: "Chef's Choice",
     },
     {
-      name: "Sushi Tower",
-      nameJp: "寿司タワー",
-      description: "Layered tower of sushi rice, spicy tuna, crab, and avocado topped with crispy rice cracker, served in ponzu sauce.",
-      price: "$28",
+      name: "The Kame Trust Me 59",
+      nameJp: "亀のおまかせ",
+      description: "Premium omakase featuring toro, spicy toro, toro & salmon sashimi, yellowtail belly, sea bass, aji, hamachi, shrimp, uni, and blue crab hand roll.",
+      price: "$59",
       image: SUSHI_TOWER,
-      badge: "Popular",
+      badge: "Premium",
     },
     {
-      name: "Hawaiian Poke Bowl",
-      nameJp: "ポケボウル",
-      description: "Assorted sashimi on avocado salad with wakame, cucumber, oshinko, and sushi rice with house poke sauce.",
-      price: "$18",
+      name: "Moriawase - Chef Choice Sushi",
+      nameJp: "盛り合わせ",
+      description: "Classic (8pcs) or Kame Premium (9pcs) — chef's selection of fresh nigiri sushi.",
+      price: "From $28",
       image: SASHIMI_PLATE,
     },
     {
-      name: "Asian Mango Seafood Ceviche",
-      nameJp: "マンゴーセビーチェ",
-      description: "Fresh seafood tossed with ripe mango, citrus ponzu, jalapeño, and microgreens. A refreshing fusion starter.",
-      price: "$16",
+      name: "Chef choice Sashimi",
+      nameJp: "刺身盛り合わせ",
+      description: "A (8 pcs 4 kinds), B (12 pcs 4 kinds), or C (20 pcs 4 kinds) — premium fresh sashimi selection.",
+      price: "From $32",
     },
   ],
   "Sushi & Nigiri": [
     {
-      name: "Sushi Special Combo (12+1)",
-      nameJp: "寿司スペシャル",
-      description: "12 pieces of premium sushi, California roll, and spicy tuna roll. Salmon, tuna, yellowtail, red snapper, and more.",
-      price: "$28.99",
-      badge: "Best Value",
+      name: "Toro",
+      nameJp: "トロ",
+      description: "Premium fatty tuna — 2 pcs sushi or 3 pcs sashimi.",
+      price: "$10 / $18",
+      badge: "Premium",
     },
     {
-      name: "Salmon Lover's Combo",
-      nameJp: "サーモン盛り合わせ",
-      description: "Eight pieces of fresh salmon nigiri and one double salmon roll. For the salmon enthusiast.",
-      price: "From $24.99",
+      name: "Fatty Toro",
+      nameJp: "大トロ",
+      description: "Extra fatty toro — 2 pcs sushi or 3 pcs sashimi.",
+      price: "$8 / $23",
     },
     {
-      name: "Tuna Lover's Combo",
-      nameJp: "マグロ盛り合わせ",
-      description: "Eight pieces of premium tuna nigiri and one double tuna roll. Rich, buttery bluefin.",
-      price: "From $24.99",
+      name: "Otoro",
+      nameJp: "大トロ",
+      description: "Highest grade fatty tuna — 2 pcs sushi or 3 pcs sashimi.",
+      price: "$9 / $25",
     },
     {
-      name: "Chirashi Special",
-      nameJp: "ちらし寿司",
-      description: "Assorted sashimi, masago, avocado, wasabi, and ginger over seasoned sushi rice.",
-      price: "$25.99",
+      name: "Chu Toro",
+      nameJp: "中トロ",
+      description: "Medium fatty tuna — 2 pcs sushi or 3 pcs sashimi.",
+      price: "$8 / $21",
     },
     {
-      name: "SaKeDon",
-      nameJp: "鮭丼",
-      description: "Salmon sashimi bowl — thick-cut premium salmon over warm sushi rice with house sauce.",
-      price: "$30.99",
+      name: "Hamachi",
+      nameJp: "ハマチ",
+      description: "Yellowtail — 2 pcs sushi or 3 pcs sashimi.",
+      price: "$5 / $14",
     },
     {
-      name: "TekkaDon",
-      nameJp: "鉄火丼",
-      description: "Tuna sashimi bowl — premium bluefin tuna over warm sushi rice with house sauce.",
-      price: "$30.99",
+      name: "Sake",
+      nameJp: "サケ",
+      description: "Fresh salmon — 2 pcs sushi or 3 pcs sashimi.",
+      price: "$6 / $14",
     },
   ],
   "Sashimi": [
     {
-      name: "Sashimi Regular Combo (15)",
-      nameJp: "刺身レギュラー",
-      description: "15 pieces of fresh sashimi: salmon (3), tuna (3), white tuna (3), red snapper (3), yellowtail (3).",
-      price: "$28.99",
+      name: "Tamago Scallop-Hokkaido Uni",
+      nameJp: "タマゴ帆立北海道ウニ",
+      description: "Scallop with sea urchin — 2 pcs sushi or 3 pcs sashimi.",
+      price: "$13 / $28",
       image: SASHIMI_PLATE,
-    },
-    {
-      name: "Sashimi Special Combo (25)",
-      nameJp: "刺身スペシャル",
-      description: "25 pieces of premium sashimi: salmon (5), tuna (5), white tuna (5), red snapper (5), yellowtail (5).",
-      price: "$47.99",
       badge: "Premium",
     },
     {
-      name: "Sashimi Wrap Apple Roll",
-      nameJp: "刺身ラップ",
-      description: "Signature dish — fresh sashimi wrapped with thinly sliced apple and cucumber, drizzled with yuzu dressing.",
-      price: "$22",
-      badge: "Signature",
+      name: "Hotate + Fake Grass",
+      nameJp: "ホタテ",
+      description: "Scallop with garnish — 2 pcs sushi or 3 pcs sashimi.",
+      price: "$10 / $28",
+    },
+    {
+      name: "Hotate Sauce with Ikura",
+      nameJp: "ホタテ イクラ",
+      description: "Scallop with salmon roe — 2 pcs sushi or 3 pcs sashimi.",
+      price: "$10 / $27",
+    },
+    {
+      name: "Ama Ebi",
+      nameJp: "甘エビ",
+      description: "Sweet shrimp — 2 pcs sushi or 3 pcs sashimi.",
+      price: "$8 / $23",
+    },
+    {
+      name: "Uni",
+      nameJp: "ウニ",
+      description: "Sea urchin — 2 pcs sushi or 3 pcs sashimi.",
+      price: "$5 / $11",
     },
   ],
   "Rolls": [
     {
       name: "Kame Roll",
       nameJp: "亀ロール",
-      description: "Our signature roll — spicy tuna, cucumber, and avocado inside, topped with seared salmon and house kame sauce.",
-      price: "$16",
+      description: "Spicy tuna, spicy eel, cucumber, crab meat and avocado, topped with toro tuna and salmon spicy tuna.",
+      price: "$22",
       badge: "House Special",
     },
     {
-      name: "Bluefin Lover Roll",
-      nameJp: "本マグロロール",
-      description: "Premium bluefin tuna, avocado, and cucumber inside, topped with more bluefin and microgreens.",
-      price: "$22",
+      name: "Spicy Kame Roll",
+      nameJp: "スパイシー亀ロール",
+      description: "Spicy tuna, cucumber and avocado, topped with spicy tuna and eel tuna with spicy mayo.",
+      price: "$18",
     },
     {
       name: "Ultimate Shrimp Roll",
       nameJp: "海老ロール",
-      description: "Tempura shrimp, crab, cucumber inside, topped with spicy shrimp, avocado, and spicy mayo.",
-      price: "$18",
+      description: "Shrimp tempura, spicy crab, and avocado, topped with tuna, salmon, yellowtail, butter shrimp, spice, jalapeno, creamy ponzu, and spicy mayo.",
+      price: "$24",
       badge: "Popular",
     },
     {
-      name: "Crispy Rice Bites",
-      nameJp: "クリスピーライス",
-      description: "Crispy sushi rice topped with spicy tuna, jalapeño, and house sauce. Six pieces.",
-      price: "$14",
+      name: "Paradise Roll",
+      nameJp: "パラダイスロール",
+      description: "Spicy tuna, spicy crab, scallop, and shrimp tempura, topped with salmon, toro, shrimp tuna and topped eel coat with eel.",
+      price: "$19",
     },
     {
       name: "California Roll",
       nameJp: "カリフォルニア",
-      description: "Classic crab, cucumber, and avocado roll. Eight pieces.",
-      price: "$6.50",
+      description: "Classic crab meat, avocado, cucumber.",
+      price: "$9",
     },
     {
       name: "Philadelphia Roll",
       nameJp: "フィラデルフィア",
-      description: "Smoked salmon, avocado, and cream cheese. Eight pieces.",
-      price: "$7.99",
+      description: "Smoked salmon, cream cheese, avocado.",
+      price: "$11",
     },
   ],
   "Kitchen": [
     {
       name: "Tonkotsu Ramen",
       nameJp: "豚骨ラーメン",
-      description: "Rich pork bone broth, chashu pork belly, soft-boiled egg, bamboo shoots, nori, and green onion.",
+      description: "Pork broth with pork chashu, menma, boiled egg, bean sprout, onion, black mushroom, nori. Add spicy +1",
+      price: "$13",
+    },
+    {
+      name: "Nagasaki Seafood Ramen",
+      nameJp: "長崎シーフードラーメン",
+      description: "Pork broth, seafood, mixed vegetables, boiled egg.",
       price: "$16",
+    },
+    {
+      name: "Miso Ramen",
+      nameJp: "味噌ラーメン",
+      description: "Pork broth with miso chashu, boiled egg, green onion, bean sprout, menma, black mushroom, nori. Add spicy +1",
+      price: "$14",
     },
     {
       name: "Hibachi Chicken",
       nameJp: "鶏のヒバチ",
-      description: "Grilled chicken with hibachi vegetables, fried rice, and house ginger sauce.",
-      price: "$18",
+      description: "Grilled chicken with hibachi vegetables, fried rice, and house sauce. Includes miso soup.",
+      price: "$24",
     },
     {
       name: "Hibachi Salmon",
       nameJp: "鮭のヒバチ",
-      description: "Grilled salmon fillet with hibachi vegetables, fried rice, and teriyaki glaze.",
-      price: "$22",
+      description: "Grilled salmon fillet with hibachi vegetables, fried rice, and teriyaki glaze. Includes miso soup.",
+      price: "$31",
     },
     {
-      name: "Lunch Bento Box",
-      nameJp: "弁当",
-      description: "Choice of protein with miso soup, house salad, rice, and seasonal sides. Available Mon–Fri 11AM–3PM.",
-      price: "From $14",
-      badge: "Lunch Special",
+      name: "Black Cod",
+      nameJp: "黒ムツ",
+      description: "Black cod, marinated with house-made Saikyo miso, served with light tempura enoki.",
+      price: "$32",
     },
   ],
   "Bar": [
     {
       name: "Japanese Whisky Selection",
       nameJp: "日本ウイスキー",
-      description: "Curated selection of premium Japanese whiskies. Ask your server for today's pour.",
+      description: "Curated selection of premium Japanese whiskies including Yamazaki, Hibiki, and Hakushu. Ask your server for today's pour.",
       price: "Market Price",
       image: SAKE_COCKTAILS,
       badge: "Premium",
@@ -302,48 +324,73 @@ function Navbar() {
           ))}
         </div>
 
-        {/* CTA */}
-        <a
-          href="tel:+12143089507"
-          className="hidden md:inline-flex btn-gold px-5 py-2 text-xs tracking-widest uppercase font-bold rounded-none"
-        >
-          <span>Call to Order</span>
-        </a>
-
-        {/* Mobile menu button */}
-        <button
-          className="md:hidden text-foreground"
-          onClick={() => setOpen(!open)}
-          aria-label="Toggle menu"
-        >
-          {open ? <X size={22} /> : <Menu size={22} />}
-        </button>
-      </div>
-
-      {/* Mobile menu */}
-      {open && (
-        <div
-          className="md:hidden px-6 pb-6 pt-2 flex flex-col gap-4"
-          style={{ background: "oklch(0.10 0.005 240 / 98%)" }}
-        >
-          {links.map((l) => (
-            <a
-              key={l.href}
-              href={l.href}
-              className="nav-link text-base"
-              onClick={() => setOpen(false)}
-            >
-              {l.label}
-            </a>
-          ))}
+        {/* CTA + Mobile Menu */}
+        <div className="flex items-center gap-4">
           <a
             href="tel:+12143089507"
-            className="btn-gold px-5 py-3 text-xs tracking-widest uppercase font-bold text-center mt-2"
+            className="hidden sm:inline-block px-5 py-2 rounded-md transition-all duration-200"
+            style={{
+              background: "oklch(0.72 0.12 75)",
+              color: "oklch(0.10 0.005 240)",
+              fontSize: "0.875rem",
+              fontWeight: 600,
+            }}
           >
-            <span>Call to Order</span>
+            Call Now
           </a>
+          <button
+            onClick={() => setOpen(!open)}
+            className="md:hidden p-2"
+            style={{ color: "oklch(0.72 0.12 75)" }}
+          >
+            {open ? <X size={24} /> : <Menu size={24} />}
+          </button>
         </div>
-      )}
+
+        {/* Mobile Menu */}
+        {open && (
+          <div
+            className="absolute top-full left-0 right-0 md:hidden"
+            style={{ background: "oklch(0.15 0.006 240)", borderBottom: "1px solid oklch(1 0 0 / 8%)" }}
+          >
+            <div className="flex flex-col gap-4 px-6 py-4">
+              {links.map((l) => (
+                <a key={l.href} href={l.href} className="nav-link" onClick={() => setOpen(false)}>
+                  {l.label}
+                </a>
+              ))}
+              <a href="tel:+12143089507" className="nav-link" onClick={() => setOpen(false)}>
+                Call Now
+              </a>
+            </div>
+          </div>
+        )}
+      </div>
+
+      <style>{`
+        .nav-link {
+          font-family: 'Lato', sans-serif;
+          font-size: 0.875rem;
+          font-weight: 500;
+          color: oklch(0.85 0.005 65);
+          text-decoration: none;
+          transition: color 200ms ease-out;
+          position: relative;
+        }
+        .nav-link::after {
+          content: '';
+          position: absolute;
+          bottom: -4px;
+          left: 0;
+          width: 0;
+          height: 2px;
+          background: oklch(0.72 0.12 75);
+          transition: width 200ms ease-out;
+        }
+        .nav-link:hover::after {
+          width: 100%;
+        }
+      `}</style>
     </nav>
   );
 }
@@ -352,337 +399,273 @@ function HeroSection() {
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex items-end grain-overlay overflow-hidden"
+      className="relative w-full h-screen flex items-center justify-center overflow-hidden"
+      style={{
+        background: `linear-gradient(135deg, oklch(0.08 0.004 240) 0%, oklch(0.12 0.005 240) 100%), url(${HERO_IMG})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundAttachment: "fixed",
+      }}
     >
-      {/* Background image */}
-      <div
-        className="absolute inset-0 bg-cover bg-center"
-        style={{ backgroundImage: `url(${HERO_IMG})` }}
-      />
-      {/* Gradient overlay */}
+      {/* Overlay */}
       <div
         className="absolute inset-0"
         style={{
-          background:
-            "linear-gradient(to top, oklch(0.10 0.005 240) 0%, oklch(0.10 0.005 240 / 60%) 40%, oklch(0.10 0.005 240 / 20%) 100%)",
+          background: "oklch(0.05 0.002 240 / 60%)",
+          backdropFilter: "blur(2px)",
         }}
       />
 
       {/* Content */}
-      <div className="relative z-10 max-w-7xl mx-auto px-6 pb-20 md:pb-28 w-full">
-        <div className="max-w-2xl">
-          <p className="section-label mb-4 fade-up">
-            Modern Japanese · Frisco, Texas
-          </p>
-          <h1
-            className="text-5xl md:text-7xl font-bold leading-tight mb-6 fade-up fade-up-delay-1"
-            style={{ fontFamily: "'Playfair Display', serif", color: "oklch(0.93 0.01 85)" }}
+      <div className="relative z-10 text-center px-6 max-w-2xl mx-auto">
+        <h1
+          className="text-6xl md:text-7xl font-bold mb-6 tracking-tight"
+          style={{
+            fontFamily: "'Playfair Display', serif",
+            color: "oklch(0.95 0.002 65)",
+            textShadow: "0 2px 12px oklch(0 0 0 / 40%)",
+          }}
+        >
+          Kame Sushi
+        </h1>
+        <p
+          className="text-xl md:text-2xl mb-8 tracking-wide"
+          style={{
+            fontFamily: "'Lato', sans-serif",
+            color: "oklch(0.72 0.12 75)",
+            fontWeight: 300,
+          }}
+        >
+          Modern Japanese Omakase & Bar
+        </p>
+        <p
+          className="text-base md:text-lg mb-12"
+          style={{
+            fontFamily: "'Lato', sans-serif",
+            color: "oklch(0.85 0.005 65)",
+            lineHeight: 1.6,
+          }}
+        >
+          Authentic sushi crafted by master chefs. Premium sake and whisky. An experience of refined elegance.
+        </p>
+
+        {/* CTA Buttons */}
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <a
+            href="tel:+12143089507"
+            className="px-8 py-4 rounded-md font-semibold transition-all duration-200 hover:scale-105 active:scale-95"
+            style={{
+              background: "oklch(0.72 0.12 75)",
+              color: "oklch(0.10 0.005 240)",
+              fontFamily: "'Lato', sans-serif",
+            }}
           >
-            Where Craft
-            <br />
-            <em className="italic" style={{ color: "oklch(0.72 0.12 75)" }}>
-              Meets Tradition
-            </em>
-          </h1>
-          <p
-            className="text-base md:text-lg mb-10 leading-relaxed fade-up fade-up-delay-2"
-            style={{ color: "oklch(0.75 0.01 85)", fontWeight: 300 }}
+            <Phone size={18} className="inline mr-2" />
+            Call Us to Order
+          </a>
+          <a
+            href="#visit"
+            className="px-8 py-4 rounded-md font-semibold transition-all duration-200 hover:scale-105 active:scale-95"
+            style={{
+              background: "oklch(0.20 0.006 240)",
+              color: "oklch(0.72 0.12 75)",
+              border: "2px solid oklch(0.72 0.12 75)",
+              fontFamily: "'Lato', sans-serif",
+            }}
           >
-            Premium sushi, sashimi, and chef-driven specialties in a refined yet
-            approachable atmosphere. Now open in Frisco, TX.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 fade-up fade-up-delay-3">
-            <a
-              href="tel:+12143089507"
-              className="btn-gold px-8 py-4 text-sm tracking-widest uppercase font-bold text-center"
-            >
-              <span>Call Us to Order</span>
-            </a>
-            <a
-              href="#visit"
-              className="px-8 py-4 text-sm tracking-widest uppercase font-bold text-center border border-white/20 hover:border-white/40 transition-colors"
-              style={{ color: "oklch(0.80 0.01 85)" }}
-            >
-              Visit Us to Dine In
-            </a>
-          </div>
+            Visit Us to Dine In
+          </a>
         </div>
       </div>
 
       {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-1 opacity-50">
-        <span className="text-[0.6rem] tracking-widest uppercase" style={{ color: "oklch(0.72 0.12 75)" }}>
-          Scroll
-        </span>
-        <ChevronDown size={14} style={{ color: "oklch(0.72 0.12 75)" }} />
-      </div>
-    </section>
-  );
-}
-
-function AboutSection() {
-  const { ref, inView } = useInView();
-  return (
-    <section id="about" className="py-24 md:py-32" ref={ref}>
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="grid md:grid-cols-2 gap-16 items-center">
-          {/* Text */}
-          <div className={inView ? "fade-up" : "opacity-0"}>
-            <p className="section-label mb-4">Our Story</p>
-            <h2
-              className="text-4xl md:text-5xl font-bold leading-tight mb-6"
-              style={{ fontFamily: "'Playfair Display', serif" }}
-            >
-              A Refined Sushi
-              <br />
-              <em className="italic" style={{ color: "oklch(0.72 0.12 75)" }}>
-                Experience
-              </em>
-            </h2>
-            <div className="gold-divider mb-8" />
-            <p
-              className="text-base leading-relaxed mb-6"
-              style={{ color: "oklch(0.70 0.01 85)", fontWeight: 300 }}
-            >
-              Kame Sushi brings a premium Japanese dining experience to the heart
-              of Frisco, Texas. Our chefs source the finest ingredients daily —
-              from bluefin tuna to fresh-caught yellowtail — crafting each piece
-              with precision and care.
-            </p>
-            <p
-              className="text-base leading-relaxed mb-10"
-              style={{ color: "oklch(0.70 0.01 85)", fontWeight: 300 }}
-            >
-              Beyond sushi, our curated bar features Japanese whisky, sake
-              flights, and handcrafted cocktails. Whether you're joining us for a
-              casual lunch bento or an evening omakase, every visit is a
-              celebration of Japanese culinary artistry.
-            </p>
-            <div className="flex gap-8">
-              {[
-                { value: "Daily", label: "Fresh Ingredients" },
-                { value: "Real", label: "Wasabi" },
-                { value: "Full", label: "Bar & Sake" },
-              ].map((stat) => (
-                <div key={stat.label}>
-                  <div
-                    className="text-2xl font-bold mb-1"
-                    style={{ fontFamily: "'Playfair Display', serif", color: "oklch(0.72 0.12 75)" }}
-                  >
-                    {stat.value}
-                  </div>
-                  <div
-                    className="text-xs tracking-widest uppercase"
-                    style={{ color: "oklch(0.55 0.01 85)" }}
-                  >
-                    {stat.label}
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Image */}
-          <div
-            className={`relative ${inView ? "fade-up fade-up-delay-2" : "opacity-0"}`}
-          >
-            <div className="gallery-img rounded-sm overflow-hidden aspect-[4/3]">
-              <img
-                src={INTERIOR_DINING}
-                alt="Kame Sushi dining room interior"
-                className="w-full h-full object-cover"
-              />
-            </div>
-            {/* Accent border */}
-            <div
-              className="absolute -bottom-4 -right-4 w-2/3 h-2/3 border rounded-sm pointer-events-none"
-              style={{ borderColor: "oklch(0.72 0.12 75 / 30%)" }}
-            />
-          </div>
-        </div>
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10 animate-bounce">
+        <ChevronDown size={28} style={{ color: "oklch(0.72 0.12 75)" }} />
       </div>
     </section>
   );
 }
 
 function MenuSection() {
-  const categories = Object.keys(menuData) as MenuCategory[];
-  const [active, setActive] = useState<MenuCategory>("Signature");
+  const [activeTab, setActiveTab] = useState<MenuCategory>("Signature");
   const { ref, inView } = useInView();
 
-  const items = menuData[active];
+  const tabs: MenuCategory[] = ["Signature", "Sushi & Nigiri", "Sashimi", "Rolls", "Kitchen", "Bar"];
 
   return (
-    <section id="menu" className="py-24 md:py-32" ref={ref}>
-      <div className="max-w-7xl mx-auto px-6">
-        {/* Header */}
-        <div className={`text-center mb-12 ${inView ? "fade-up" : "opacity-0"}`}>
-          <p className="section-label mb-3">Our Menu</p>
-          <h2
-            className="text-4xl md:text-5xl font-bold"
-            style={{ fontFamily: "'Playfair Display', serif" }}
-          >
-            Crafted with{" "}
-            <em className="italic" style={{ color: "oklch(0.72 0.12 75)" }}>
-              Precision
-            </em>
-          </h2>
-          <div className="gold-divider max-w-xs mx-auto mt-6" />
-        </div>
+    <section
+      id="menu"
+      ref={ref}
+      className="py-20 md:py-32 px-6"
+      style={{
+        background: "oklch(0.10 0.005 240)",
+        opacity: inView ? 1 : 0.5,
+        transform: inView ? "translateY(0)" : "translateY(20px)",
+        transition: "all 800ms ease-out",
+      }}
+    >
+      <div className="max-w-6xl mx-auto">
+        {/* Section Title */}
+        <h2
+          className="text-5xl md:text-6xl font-bold text-center mb-4"
+          style={{
+            fontFamily: "'Playfair Display', serif",
+            color: "oklch(0.95 0.002 65)",
+          }}
+        >
+          Our Menu
+        </h2>
+        <div
+          className="w-24 h-1 bg-gradient-to-r from-transparent via-amber-600 to-transparent mx-auto mb-16"
+          style={{ background: "linear-gradient(90deg, transparent, oklch(0.72 0.12 75), transparent)" }}
+        />
 
         {/* Tabs */}
-        <div
-          className={`flex flex-wrap justify-center gap-0 mb-12 border-b ${inView ? "fade-up fade-up-delay-1" : "opacity-0"}`}
-          style={{ borderColor: "oklch(1 0 0 / 10%)" }}
-        >
-          {categories.map((cat) => (
+        <div className="flex flex-wrap gap-2 justify-center mb-12">
+          {tabs.map((tab) => (
             <button
-              key={cat}
-              onClick={() => setActive(cat)}
-              className={`tab-btn ${active === cat ? "active" : ""}`}
+              key={tab}
+              onClick={() => setActiveTab(tab)}
+              className="px-4 py-2 rounded-full transition-all duration-200 text-sm font-medium"
+              style={{
+                background: activeTab === tab ? "oklch(0.72 0.12 75)" : "oklch(0.15 0.006 240)",
+                color: activeTab === tab ? "oklch(0.10 0.005 240)" : "oklch(0.85 0.005 65)",
+                fontFamily: "'Lato', sans-serif",
+              }}
             >
-              {cat}
+              {tab}
             </button>
           ))}
         </div>
 
-        {/* Menu grid */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {items.map((item, i) => (
-            <MenuCard key={item.name} item={item} delay={i} />
+        {/* Menu Items Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {menuData[activeTab].map((item, idx) => (
+            <div
+              key={idx}
+              className="p-6 rounded-lg transition-all duration-300 hover:scale-105 active:scale-95"
+              style={{
+                background: "oklch(0.15 0.006 240)",
+                border: "1px solid oklch(1 0 0 / 10%)",
+              }}
+            >
+              {item.image && (
+                <img
+                  src={item.image}
+                  alt={item.name}
+                  className="w-full h-40 object-cover rounded-md mb-4"
+                />
+              )}
+              <div className="flex items-start justify-between mb-2">
+                <div>
+                  <h3
+                    className="text-lg font-bold"
+                    style={{
+                      fontFamily: "'Playfair Display', serif",
+                      color: "oklch(0.95 0.002 65)",
+                    }}
+                  >
+                    {item.name}
+                  </h3>
+                  {item.nameJp && (
+                    <p
+                      className="text-sm"
+                      style={{
+                        fontFamily: "'Noto Serif JP', serif",
+                        color: "oklch(0.72 0.12 75)",
+                      }}
+                    >
+                      {item.nameJp}
+                    </p>
+                  )}
+                </div>
+                {item.badge && (
+                  <span
+                    className="px-3 py-1 rounded-full text-xs font-semibold whitespace-nowrap ml-2"
+                    style={{
+                      background: "oklch(0.72 0.12 75 / 20%)",
+                      color: "oklch(0.72 0.12 75)",
+                      fontFamily: "'Lato', sans-serif",
+                    }}
+                  >
+                    {item.badge}
+                  </span>
+                )}
+              </div>
+              <p
+                className="text-sm mb-3"
+                style={{
+                  fontFamily: "'Lato', sans-serif",
+                  color: "oklch(0.75 0.005 65)",
+                  lineHeight: 1.5,
+                }}
+              >
+                {item.description}
+              </p>
+              <p
+                className="text-lg font-semibold"
+                style={{
+                  fontFamily: "'Playfair Display', serif",
+                  color: "oklch(0.72 0.12 75)",
+                }}
+              >
+                {item.price}
+              </p>
+            </div>
           ))}
-        </div>
-
-        {/* CTA */}
-        <div className="text-center mt-16">
-          <p
-            className="text-sm mb-6"
-            style={{ color: "oklch(0.55 0.01 85)", letterSpacing: "0.05em" }}
-          >
-            Prices subject to change. Consuming raw or undercooked seafood may increase risk of foodborne illness.
-          </p>
-          <a
-            href="tel:+12143089507"
-            className="btn-gold inline-flex px-10 py-4 text-sm tracking-widest uppercase font-bold"
-          >
-            <span>Call to Order — (214) 308-9507</span>
-          </a>
         </div>
       </div>
     </section>
   );
 }
 
-function MenuCard({ item, delay }: { item: MenuItem; delay: number }) {
-  return (
-    <div
-      className={`menu-card border rounded-sm overflow-hidden flex flex-col fade-up`}
-      style={{
-        borderColor: "oklch(1 0 0 / 10%)",
-        background: "oklch(0.14 0.005 240)",
-        animationDelay: `${delay * 60}ms`,
-      }}
-    >
-      {item.image && (
-        <div className="gallery-img h-44 overflow-hidden">
-          <img
-            src={item.image}
-            alt={item.name}
-            className="w-full h-full object-cover"
-          />
-        </div>
-      )}
-      <div className="p-5 flex flex-col flex-1">
-        <div className="flex items-start justify-between gap-2 mb-1">
-          <div>
-            <h3
-              className="text-base font-semibold leading-tight"
-              style={{ fontFamily: "'Playfair Display', serif" }}
-            >
-              {item.name}
-            </h3>
-            {item.nameJp && (
-              <span
-                className="text-xs"
-                style={{
-                  fontFamily: "'Noto Serif JP', serif",
-                  color: "oklch(0.55 0.01 85)",
-                }}
-              >
-                {item.nameJp}
-              </span>
-            )}
-          </div>
-          {item.badge && (
-            <span
-              className="text-[0.6rem] tracking-widest uppercase px-2 py-0.5 shrink-0 mt-0.5"
-              style={{
-                border: "1px solid oklch(0.72 0.12 75 / 50%)",
-                color: "oklch(0.72 0.12 75)",
-              }}
-            >
-              {item.badge}
-            </span>
-          )}
-        </div>
-        <p
-          className="text-sm leading-relaxed mt-2 flex-1"
-          style={{ color: "oklch(0.60 0.01 85)", fontWeight: 300 }}
-        >
-          {item.description}
-        </p>
-        <div
-          className="mt-4 pt-4 text-sm font-bold"
-          style={{
-            borderTop: "1px solid oklch(1 0 0 / 8%)",
-            color: "oklch(0.72 0.12 75)",
-            fontFamily: "'Playfair Display', serif",
-          }}
-        >
-          {item.price}
-        </div>
-      </div>
-    </div>
-  );
-}
-
 function GallerySection() {
   const { ref, inView } = useInView();
-  const images = [
-    { src: INTERIOR_DINING, alt: "Dining room interior", span: "md:col-span-2 md:row-span-2" },
-    { src: SUSHI_PLATTER, alt: "Premium nigiri platter" },
-    { src: SUSHI_TOWER, alt: "Signature sushi tower" },
-    { src: SASHIMI_PLATE, alt: "Fresh sashimi selection" },
-    { src: SAKE_COCKTAILS, alt: "Japanese whisky and sake bar" },
-  ];
+  const images = [SUSHI_PLATTER, SUSHI_TOWER, SASHIMI_PLATE, INTERIOR_DINING, SAKE_COCKTAILS, HERO_IMG];
 
   return (
-    <section id="gallery" className="py-24 md:py-32" ref={ref}>
-      <div className="max-w-7xl mx-auto px-6">
-        <div className={`text-center mb-12 ${inView ? "fade-up" : "opacity-0"}`}>
-          <p className="section-label mb-3">Gallery</p>
-          <h2
-            className="text-4xl md:text-5xl font-bold"
-            style={{ fontFamily: "'Playfair Display', serif" }}
-          >
-            The Kame{" "}
-            <em className="italic" style={{ color: "oklch(0.72 0.12 75)" }}>
-              Experience
-            </em>
-          </h2>
-          <div className="gold-divider max-w-xs mx-auto mt-6" />
-        </div>
+    <section
+      id="gallery"
+      ref={ref}
+      className="py-20 md:py-32 px-6"
+      style={{
+        background: "oklch(0.08 0.004 240)",
+      }}
+    >
+      <div className="max-w-6xl mx-auto">
+        <h2
+          className="text-5xl md:text-6xl font-bold text-center mb-4"
+          style={{
+            fontFamily: "'Playfair Display', serif",
+            color: "oklch(0.95 0.002 65)",
+          }}
+        >
+          Gallery
+        </h2>
+        <div
+          className="w-24 h-1 bg-gradient-to-r from-transparent via-amber-600 to-transparent mx-auto mb-16"
+          style={{ background: "linear-gradient(90deg, transparent, oklch(0.72 0.12 75), transparent)" }}
+        />
 
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4 auto-rows-[200px] md:auto-rows-[220px]">
-          {images.map((img, i) => (
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {images.map((img, idx) => (
             <div
-              key={img.alt}
-              className={`gallery-img overflow-hidden rounded-sm ${img.span || ""} ${inView ? `fade-up fade-up-delay-${Math.min(i + 1, 5)}` : "opacity-0"}`}
+              key={idx}
+              className="relative h-64 md:h-80 rounded-lg overflow-hidden group cursor-pointer"
+              style={{
+                opacity: inView ? 1 : 0.3,
+                transform: inView ? "scale(1)" : "scale(0.95)",
+                transition: `all 600ms ease-out ${idx * 100}ms`,
+              }}
             >
               <img
-                src={img.src}
-                alt={img.alt}
-                className="w-full h-full object-cover"
+                src={img}
+                alt={`Gallery ${idx + 1}`}
+                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+              />
+              <div
+                className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                style={{ background: "oklch(0 0 0 / 40%)" }}
               />
             </div>
           ))}
@@ -694,70 +677,92 @@ function GallerySection() {
 
 function BarSection() {
   const { ref, inView } = useInView();
+
   return (
-    <section id="bar" className="py-24 md:py-32 relative overflow-hidden" ref={ref}>
-      {/* Background image with overlay */}
-      <div
-        className="absolute inset-0 bg-cover bg-center"
-        style={{ backgroundImage: `url(${SAKE_COCKTAILS})` }}
-      />
-      <div
-        className="absolute inset-0"
-        style={{
-          background:
-            "linear-gradient(135deg, oklch(0.10 0.005 240 / 95%) 0%, oklch(0.10 0.005 240 / 85%) 100%)",
-        }}
-      />
+    <section
+      id="bar"
+      ref={ref}
+      className="py-20 md:py-32 px-6"
+      style={{
+        background: "oklch(0.10 0.005 240)",
+        opacity: inView ? 1 : 0.5,
+        transform: inView ? "translateY(0)" : "translateY(20px)",
+        transition: "all 800ms ease-out",
+      }}
+    >
+      <div className="max-w-6xl mx-auto">
+        <h2
+          className="text-5xl md:text-6xl font-bold text-center mb-4"
+          style={{
+            fontFamily: "'Playfair Display', serif",
+            color: "oklch(0.95 0.002 65)",
+          }}
+        >
+          Premium Bar
+        </h2>
+        <div
+          className="w-24 h-1 bg-gradient-to-r from-transparent via-amber-600 to-transparent mx-auto mb-16"
+          style={{ background: "linear-gradient(90deg, transparent, oklch(0.72 0.12 75), transparent)" }}
+        />
 
-      <div className="relative z-10 max-w-7xl mx-auto px-6">
-        <div className="max-w-xl">
-          <div className={inView ? "fade-up" : "opacity-0"}>
-            <p className="section-label mb-4">The Bar</p>
-            <h2
-              className="text-4xl md:text-5xl font-bold leading-tight mb-6"
-              style={{ fontFamily: "'Playfair Display', serif" }}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {menuData["Bar"].map((item, idx) => (
+            <div
+              key={idx}
+              className="p-8 rounded-lg transition-all duration-300 hover:scale-105"
+              style={{
+                background: "oklch(0.15 0.006 240)",
+                border: "1px solid oklch(1 0 0 / 10%)",
+              }}
             >
-              Japanese Spirits &{" "}
-              <em className="italic" style={{ color: "oklch(0.72 0.12 75)" }}>
-                Crafted Cocktails
-              </em>
-            </h2>
-            <div className="gold-divider mb-8" />
-            <p
-              className="text-base leading-relaxed mb-8"
-              style={{ color: "oklch(0.70 0.01 85)", fontWeight: 300 }}
-            >
-              Our bar program celebrates the depth of Japanese spirits. From
-              rare single-malt whiskies to curated sake flights and
-              house-crafted cocktails, every sip is designed to complement your
-              meal.
-            </p>
-          </div>
-
-          <div className={`grid grid-cols-2 gap-4 ${inView ? "fade-up fade-up-delay-2" : "opacity-0"}`}>
-            {[
-              { title: "Japanese Whisky", desc: "Curated selection of premium pours" },
-              { title: "Sake Flights", desc: "Junmai, Ginjo & Daiginjo" },
-              { title: "Craft Cocktails", desc: "Seasonal Japanese-inspired creations" },
-              { title: "Beer & Wine", desc: "Sapporo, Kirin, Asahi & more" },
-            ].map((item) => (
-              <div
-                key={item.title}
-                className="p-4 border rounded-sm"
-                style={{ borderColor: "oklch(0.72 0.12 75 / 25%)", background: "oklch(0.14 0.005 240 / 60%)" }}
+              {item.image && (
+                <img
+                  src={item.image}
+                  alt={item.name}
+                  className="w-full h-48 object-cover rounded-md mb-6"
+                />
+              )}
+              <h3
+                className="text-2xl font-bold mb-2"
+                style={{
+                  fontFamily: "'Playfair Display', serif",
+                  color: "oklch(0.95 0.002 65)",
+                }}
               >
-                <h4
-                  className="text-sm font-semibold mb-1"
-                  style={{ fontFamily: "'Playfair Display', serif", color: "oklch(0.72 0.12 75)" }}
+                {item.name}
+              </h3>
+              {item.nameJp && (
+                <p
+                  className="text-sm mb-3"
+                  style={{
+                    fontFamily: "'Noto Serif JP', serif",
+                    color: "oklch(0.72 0.12 75)",
+                  }}
                 >
-                  {item.title}
-                </h4>
-                <p className="text-xs" style={{ color: "oklch(0.60 0.01 85)", fontWeight: 300 }}>
-                  {item.desc}
+                  {item.nameJp}
                 </p>
-              </div>
-            ))}
-          </div>
+              )}
+              <p
+                className="text-base mb-4"
+                style={{
+                  fontFamily: "'Lato', sans-serif",
+                  color: "oklch(0.75 0.005 65)",
+                  lineHeight: 1.6,
+                }}
+              >
+                {item.description}
+              </p>
+              <p
+                className="text-xl font-semibold"
+                style={{
+                  fontFamily: "'Playfair Display', serif",
+                  color: "oklch(0.72 0.12 75)",
+                }}
+              >
+                {item.price}
+              </p>
+            </div>
+          ))}
         </div>
       </div>
     </section>
@@ -766,132 +771,153 @@ function BarSection() {
 
 function VisitSection() {
   const { ref, inView } = useInView();
-  const [mapReady, setMapReady] = useState(false);
 
   return (
-    <section id="visit" className="py-24 md:py-32" ref={ref}>
-      <div className="max-w-7xl mx-auto px-6">
-        <div className={`text-center mb-16 ${inView ? "fade-up" : "opacity-0"}`}>
-          <p className="section-label mb-3">Find Us</p>
-          <h2
-            className="text-4xl md:text-5xl font-bold"
-            style={{ fontFamily: "'Playfair Display', serif" }}
-          >
-            Visit{" "}
-            <em className="italic" style={{ color: "oklch(0.72 0.12 75)" }}>
-              Kame Sushi
-            </em>
-          </h2>
-          <div className="gold-divider max-w-xs mx-auto mt-6" />
-        </div>
+    <section
+      id="visit"
+      ref={ref}
+      className="py-20 md:py-32 px-6"
+      style={{
+        background: "oklch(0.08 0.004 240)",
+      }}
+    >
+      <div className="max-w-6xl mx-auto">
+        <h2
+          className="text-5xl md:text-6xl font-bold text-center mb-4"
+          style={{
+            fontFamily: "'Playfair Display', serif",
+            color: "oklch(0.95 0.002 65)",
+          }}
+        >
+          Visit Us
+        </h2>
+        <div
+          className="w-24 h-1 bg-gradient-to-r from-transparent via-amber-600 to-transparent mx-auto mb-16"
+          style={{ background: "linear-gradient(90deg, transparent, oklch(0.72 0.12 75), transparent)" }}
+        />
 
-        <div className="grid md:grid-cols-2 gap-12 items-start">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           {/* Info */}
-          <div className={inView ? "fade-up fade-up-delay-1" : "opacity-0"}>
+          <div className="space-y-8">
             {/* Address */}
-            <div className="flex gap-4 mb-8">
-              <MapPin size={20} className="mt-1 shrink-0" style={{ color: "oklch(0.72 0.12 75)" }} />
-              <div>
-                <p className="section-label mb-1">Location</p>
-                <p style={{ color: "oklch(0.80 0.01 85)" }}>
-                  5251 Panther Creek Pkwy, Suite 400
-                </p>
-                <p style={{ color: "oklch(0.80 0.01 85)" }}>Frisco, TX 75033</p>
-                <a
-                  href="https://maps.google.com/?q=5251+Panther+Creek+Pkwy+%23400+Frisco+TX+75033"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-sm mt-1 inline-block"
-                  style={{ color: "oklch(0.72 0.12 75)" }}
-                >
-                  Get Directions →
-                </a>
-              </div>
+            <div>
+              <h3
+                className="text-2xl font-bold mb-3 flex items-center gap-3"
+                style={{
+                  fontFamily: "'Playfair Display', serif",
+                  color: "oklch(0.95 0.002 65)",
+                }}
+              >
+                <MapPin size={28} style={{ color: "oklch(0.72 0.12 75)" }} />
+                Location
+              </h3>
+              <p
+                style={{
+                  fontFamily: "'Lato', sans-serif",
+                  color: "oklch(0.85 0.005 65)",
+                  lineHeight: 1.8,
+                }}
+              >
+                5251 Panther Creek Pkwy #400<br />
+                Frisco, TX 75033<br />
+                United States
+              </p>
             </div>
 
             {/* Phone */}
-            <div className="flex gap-4 mb-8">
-              <Phone size={20} className="mt-1 shrink-0" style={{ color: "oklch(0.72 0.12 75)" }} />
-              <div>
-                <p className="section-label mb-1">Phone</p>
-                <a
-                  href="tel:+12143089507"
-                  className="text-lg font-semibold hover:opacity-80 transition-opacity"
-                  style={{ fontFamily: "'Playfair Display', serif", color: "oklch(0.80 0.01 85)" }}
-                >
-                  (214) 308-9507
-                </a>
-              </div>
+            <div>
+              <h3
+                className="text-2xl font-bold mb-3 flex items-center gap-3"
+                style={{
+                  fontFamily: "'Playfair Display', serif",
+                  color: "oklch(0.95 0.002 65)",
+                }}
+              >
+                <Phone size={28} style={{ color: "oklch(0.72 0.12 75)" }} />
+                Phone
+              </h3>
+              <a
+                href="tel:+12143089507"
+                style={{
+                  fontFamily: "'Lato', sans-serif",
+                  color: "oklch(0.72 0.12 75)",
+                  fontSize: "1.125rem",
+                  fontWeight: 600,
+                  textDecoration: "none",
+                }}
+              >
+                (214) 308-9507
+              </a>
             </div>
 
             {/* Hours */}
-            <div className="flex gap-4 mb-10">
-              <Clock size={20} className="mt-1 shrink-0" style={{ color: "oklch(0.72 0.12 75)" }} />
-              <div>
-                <p className="section-label mb-3">Hours</p>
-                <div className="space-y-2">
-                  {hours.map((h) => (
-                    <div key={h.days} className="flex flex-col sm:flex-row sm:gap-4">
-                      <span className="text-sm w-44" style={{ color: "oklch(0.60 0.01 85)" }}>
-                        {h.days}
-                      </span>
-                      <span className="text-sm font-semibold" style={{ color: "oklch(0.80 0.01 85)" }}>
-                        {h.time}
-                      </span>
-                    </div>
-                  ))}
-                </div>
+            <div>
+              <h3
+                className="text-2xl font-bold mb-3 flex items-center gap-3"
+                style={{
+                  fontFamily: "'Playfair Display', serif",
+                  color: "oklch(0.95 0.002 65)",
+                }}
+              >
+                <Clock size={28} style={{ color: "oklch(0.72 0.12 75)" }} />
+                Hours
+              </h3>
+              <div
+                style={{
+                  fontFamily: "'Lato', sans-serif",
+                  color: "oklch(0.85 0.005 65)",
+                  lineHeight: 2,
+                }}
+              >
+                {hours.map((h, idx) => (
+                  <div key={idx}>
+                    <strong>{h.days}:</strong> {h.time}
+                  </div>
+                ))}
               </div>
             </div>
 
-            {/* CTAs */}
-            <div className="flex flex-col sm:flex-row gap-4">
-              <a
-                href="tel:+12143089507"
-                className="btn-gold px-8 py-4 text-sm tracking-widest uppercase font-bold text-center"
-              >
-                <span>Call Us to Order</span>
-              </a>
-              <a
-                href="https://maps.google.com/?q=5251+Panther+Creek+Pkwy+%23400+Frisco+TX+75033"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="px-8 py-4 text-sm tracking-widest uppercase font-bold text-center border transition-colors"
+            {/* Social */}
+            <div>
+              <h3
+                className="text-2xl font-bold mb-3"
                 style={{
-                  borderColor: "oklch(1 0 0 / 15%)",
-                  color: "oklch(0.80 0.01 85)",
+                  fontFamily: "'Playfair Display', serif",
+                  color: "oklch(0.95 0.002 65)",
                 }}
               >
-                Visit Us to Dine In
+                Follow Us
+              </h3>
+              <a
+                href="https://instagram.com/kamesushi_dfw"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-md transition-all duration-200 hover:scale-110"
+                style={{
+                  background: "oklch(0.72 0.12 75 / 20%)",
+                  color: "oklch(0.72 0.12 75)",
+                  fontFamily: "'Lato', sans-serif",
+                  fontWeight: 600,
+                }}
+              >
+                <Instagram size={20} />
+                @kamesushi_dfw
               </a>
             </div>
           </div>
 
           {/* Map */}
           <div
-            className={`rounded-sm overflow-hidden h-80 md:h-[420px] ${inView ? "fade-up fade-up-delay-2" : "opacity-0"}`}
-            style={{ border: "1px solid oklch(1 0 0 / 10%)" }}
+            className="rounded-lg overflow-hidden"
+            style={{
+              border: "1px solid oklch(1 0 0 / 10%)",
+              height: "400px",
+            }}
           >
             <MapView
-              onMapReady={(map) => {
-                setMapReady(true);
-                const position = { lat: 33.1484, lng: -96.8236 };
-                map.setCenter(position);
-                map.setZoom(15);
-                new google.maps.Marker({
-                  position,
-                  map,
-                  title: "Kame Sushi",
-                  icon: {
-                    path: google.maps.SymbolPath.CIRCLE,
-                    scale: 10,
-                    fillColor: "#d4a843",
-                    fillOpacity: 1,
-                    strokeColor: "#0a0a0a",
-                    strokeWeight: 2,
-                  },
-                });
-              }}
+              initialCenter={{ lat: 33.1960, lng: -96.8193 }}
+              initialZoom={15}
+              onMapReady={() => {}}
             />
           </div>
         </div>
@@ -903,72 +929,36 @@ function VisitSection() {
 function Footer() {
   return (
     <footer
-      className="py-12 border-t"
-      style={{ borderColor: "oklch(1 0 0 / 8%)", background: "oklch(0.08 0.005 240)" }}
+      className="py-8 px-6 text-center"
+      style={{
+        background: "oklch(0.08 0.004 240)",
+        borderTop: "1px solid oklch(1 0 0 / 8%)",
+      }}
     >
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-          {/* Logo */}
-          <div className="flex flex-col items-center md:items-start">
-            <span
-              className="text-2xl font-bold tracking-wider"
-              style={{ fontFamily: "'Playfair Display', serif", color: "oklch(0.72 0.12 75)" }}
-            >
-              KAME SUSHI
-            </span>
-            <span
-              className="text-[0.6rem] tracking-[0.3em] uppercase mt-0.5"
-              style={{ color: "oklch(0.45 0.01 85)" }}
-            >
-              Frisco, Texas
-            </span>
-          </div>
-
-          {/* Links */}
-          <div className="flex gap-6">
-            {["About", "Menu", "Gallery", "Bar", "Visit"].map((l) => (
-              <a
-                key={l}
-                href={`#${l.toLowerCase()}`}
-                className="text-xs tracking-widest uppercase transition-colors hover:opacity-80"
-                style={{ color: "oklch(0.50 0.01 85)" }}
-              >
-                {l}
-              </a>
-            ))}
-          </div>
-
-          {/* Social */}
-          <a
-            href="https://www.instagram.com/kamesushi_dfw/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-2 text-xs tracking-widest uppercase transition-opacity hover:opacity-70"
-            style={{ color: "oklch(0.72 0.12 75)" }}
-          >
-            <Instagram size={16} />
-            @kamesushi_dfw
-          </a>
-        </div>
-
-        <div className="gold-divider my-8" />
-
-        <div className="flex flex-col md:flex-row items-center justify-between gap-2 text-xs" style={{ color: "oklch(0.35 0.01 85)" }}>
-          <p>© {new Date().getFullYear()} Kame Sushi. All rights reserved.</p>
-          <p>5251 Panther Creek Pkwy #400, Frisco, TX 75033 · (214) 308-9507</p>
-        </div>
-      </div>
+      <p
+        style={{
+          fontFamily: "'Lato', sans-serif",
+          color: "oklch(0.60 0.01 85)",
+          fontSize: "0.875rem",
+        }}
+      >
+        © 2026 Kame Sushi. All rights reserved. | Frisco, Texas
+      </p>
     </footer>
   );
 }
 
-// ── Main Page ─────────────────────────────────────────────────────────────────
+// ── Main Component ────────────────────────────────────────────────────────────
 export default function Home() {
   return (
-    <div className="min-h-screen" style={{ background: "oklch(0.10 0.005 240)" }}>
+    <div
+      style={{
+        background: "oklch(0.10 0.005 240)",
+        color: "oklch(0.85 0.005 65)",
+      }}
+    >
       <Navbar />
       <HeroSection />
-      <AboutSection />
       <MenuSection />
       <GallerySection />
       <BarSection />

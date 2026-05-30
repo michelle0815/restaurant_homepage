@@ -18,228 +18,276 @@ const INTERIOR_DINING = "https://d2xsxph8kpxj0f.cloudfront.net/31051966368435685
 const SASHIMI_PLATE = "https://d2xsxph8kpxj0f.cloudfront.net/310519663684356858/guW3a8JT7hCMuUFDTFFuEY/sashimi_plate-GQjr3QD6YFmEtSWT6i2hpS.webp";
 
 // ── Data ─────────────────────────────────────────────────────────────────────
-type MenuCategory = "Signature" | "Sushi & Nigiri" | "Sashimi" | "Rolls" | "Kitchen" | "Bar";
+type MenuCategory = "Hibachi & Hot Specialties" | "Hand Roll, Regular Roll & Sides" | "Bake Roll, Roll without Rice, Deep Fried Roll & Dessert" | "Sushi Bar" | "Sushi & Sashimi" | "Moriawase & Chef's Trust Me" | "Special Roll";
 
 interface MenuItem {
   name: string;
-  nameJp?: string;
-  description: string;
+  description?: string;
   price: string;
   image?: string;
   badge?: string;
 }
 
-const menuData: Record<MenuCategory, MenuItem[]> = {
-  "Signature": [
-    {
-      name: "Chef's Trust Me 49",
-      nameJp: "おまかせ",
-      description: "Thinly sliced hamachi, yellowtail, toro, salmon, spicy tuna, scallop, and eel with special spicy sauce.",
-      price: "$49",
-      image: SUSHI_PLATTER,
-      badge: "Chef's Choice",
-    },
-    {
-      name: "The Kame Trust Me 59",
-      nameJp: "亀のおまかせ",
-      description: "Premium omakase featuring toro, spicy toro, toro & salmon sashimi, yellowtail belly, sea bass, aji, hamachi, shrimp, uni, and blue crab hand roll.",
-      price: "$59",
-      image: SUSHI_TOWER,
-      badge: "Premium",
-    },
-    {
-      name: "Moriawase - Chef Choice Sushi",
-      nameJp: "盛り合わせ",
-      description: "Classic (8pcs) or Kame Premium (9pcs) — chef's selection of fresh nigiri sushi.",
-      price: "From $28",
-      image: SASHIMI_PLATE,
-    },
-    {
-      name: "Chef choice Sashimi",
-      nameJp: "刺身盛り合わせ",
-      description: "A (8 pcs 4 kinds), B (12 pcs 4 kinds), or C (20 pcs 4 kinds) — premium fresh sashimi selection.",
-      price: "From $32",
-    },
-  ],
-  "Sushi & Nigiri": [
-    {
-      name: "Toro",
-      nameJp: "トロ",
-      description: "Premium fatty tuna — 2 pcs sushi or 3 pcs sashimi.",
-      price: "$10 / $18",
-      badge: "Premium",
-    },
-    {
-      name: "Fatty Toro",
-      nameJp: "大トロ",
-      description: "Extra fatty toro — 2 pcs sushi or 3 pcs sashimi.",
-      price: "$8 / $23",
-    },
-    {
-      name: "Otoro",
-      nameJp: "大トロ",
-      description: "Highest grade fatty tuna — 2 pcs sushi or 3 pcs sashimi.",
-      price: "$9 / $25",
-    },
-    {
-      name: "Chu Toro",
-      nameJp: "中トロ",
-      description: "Medium fatty tuna — 2 pcs sushi or 3 pcs sashimi.",
-      price: "$8 / $21",
-    },
-    {
-      name: "Hamachi",
-      nameJp: "ハマチ",
-      description: "Yellowtail — 2 pcs sushi or 3 pcs sashimi.",
-      price: "$5 / $14",
-    },
-    {
-      name: "Sake",
-      nameJp: "サケ",
-      description: "Fresh salmon — 2 pcs sushi or 3 pcs sashimi.",
-      price: "$6 / $14",
-    },
-  ],
-  "Sashimi": [
-    {
-      name: "Tamago Scallop-Hokkaido Uni",
-      nameJp: "タマゴ帆立北海道ウニ",
-      description: "Scallop with sea urchin — 2 pcs sushi or 3 pcs sashimi.",
-      price: "$13 / $28",
-      image: SASHIMI_PLATE,
-      badge: "Premium",
-    },
-    {
-      name: "Hotate + Fake Grass",
-      nameJp: "ホタテ",
-      description: "Scallop with garnish — 2 pcs sushi or 3 pcs sashimi.",
-      price: "$10 / $28",
-    },
-    {
-      name: "Hotate Sauce with Ikura",
-      nameJp: "ホタテ イクラ",
-      description: "Scallop with salmon roe — 2 pcs sushi or 3 pcs sashimi.",
-      price: "$10 / $27",
-    },
-    {
-      name: "Ama Ebi",
-      nameJp: "甘エビ",
-      description: "Sweet shrimp — 2 pcs sushi or 3 pcs sashimi.",
-      price: "$8 / $23",
-    },
-    {
-      name: "Uni",
-      nameJp: "ウニ",
-      description: "Sea urchin — 2 pcs sushi or 3 pcs sashimi.",
-      price: "$5 / $11",
-    },
-  ],
-  "Rolls": [
-    {
-      name: "Kame Roll",
-      nameJp: "亀ロール",
-      description: "Spicy tuna, spicy eel, cucumber, crab meat and avocado, topped with toro tuna and salmon spicy tuna.",
-      price: "$22",
-      badge: "House Special",
-    },
-    {
-      name: "Spicy Kame Roll",
-      nameJp: "スパイシー亀ロール",
-      description: "Spicy tuna, cucumber and avocado, topped with spicy tuna and eel tuna with spicy mayo.",
-      price: "$18",
-    },
-    {
-      name: "Ultimate Shrimp Roll",
-      nameJp: "海老ロール",
-      description: "Shrimp tempura, spicy crab, and avocado, topped with tuna, salmon, yellowtail, butter shrimp, spice, jalapeno, creamy ponzu, and spicy mayo.",
-      price: "$24",
-      badge: "Popular",
-    },
-    {
-      name: "Paradise Roll",
-      nameJp: "パラダイスロール",
-      description: "Spicy tuna, spicy crab, scallop, and shrimp tempura, topped with salmon, toro, shrimp tuna and topped eel coat with eel.",
-      price: "$19",
-    },
-    {
-      name: "California Roll",
-      nameJp: "カリフォルニア",
-      description: "Classic crab meat, avocado, cucumber.",
-      price: "$9",
-    },
-    {
-      name: "Philadelphia Roll",
-      nameJp: "フィラデルフィア",
-      description: "Smoked salmon, cream cheese, avocado.",
-      price: "$11",
-    },
-  ],
-  "Kitchen": [
-    {
-      name: "Tonkotsu Ramen",
-      nameJp: "豚骨ラーメン",
-      description: "Pork broth with pork chashu, menma, boiled egg, bean sprout, onion, black mushroom, nori. Add spicy +1",
-      price: "$13",
-    },
-    {
-      name: "Nagasaki Seafood Ramen",
-      nameJp: "長崎シーフードラーメン",
-      description: "Pork broth, seafood, mixed vegetables, boiled egg.",
-      price: "$16",
-    },
-    {
-      name: "Miso Ramen",
-      nameJp: "味噌ラーメン",
-      description: "Pork broth with miso chashu, boiled egg, green onion, bean sprout, menma, black mushroom, nori. Add spicy +1",
-      price: "$14",
-    },
-    {
-      name: "Hibachi Chicken",
-      nameJp: "鶏のヒバチ",
-      description: "Grilled chicken with hibachi vegetables, fried rice, and house sauce. Includes miso soup.",
-      price: "$24",
-    },
-    {
-      name: "Hibachi Salmon",
-      nameJp: "鮭のヒバチ",
-      description: "Grilled salmon fillet with hibachi vegetables, fried rice, and teriyaki glaze. Includes miso soup.",
-      price: "$31",
-    },
-    {
-      name: "Black Cod",
-      nameJp: "黒ムツ",
-      description: "Black cod, marinated with house-made Saikyo miso, served with light tempura enoki.",
-      price: "$32",
-    },
-  ],
-  "Bar": [
-    {
-      name: "Japanese Whisky Selection",
-      nameJp: "日本ウイスキー",
-      description: "Curated selection of premium Japanese whiskies including Yamazaki, Hibiki, and Hakushu. Ask your server for today's pour.",
-      price: "Market Price",
-      image: SAKE_COCKTAILS,
-      badge: "Premium",
-    },
-    {
-      name: "Sake Flight",
-      nameJp: "日本酒フライト",
-      description: "Three curated sake pours — junmai, ginjo, and daiginjo. Served with tasting notes.",
-      price: "$18",
-    },
-    {
-      name: "Handcrafted Cocktails",
-      nameJp: "カクテル",
-      description: "Seasonal Japanese-inspired cocktails crafted by our bar team. Ask about today's specials.",
-      price: "From $12",
-    },
-    {
-      name: "Beer & Wine",
-      nameJp: "ビール・ワイン",
-      description: "Japanese beers (Sapporo, Kirin, Asahi) and a curated wine list to complement your meal.",
-      price: "From $6",
-    },
-  ],
+interface MenuSection {
+  title: string;
+  description?: string;
+  items: MenuItem[];
+}
+
+interface MenuCategoryData {
+  sections?: MenuSection[];
+  items?: MenuItem[];
+}
+
+const menuData: Record<MenuCategory, MenuCategoryData> = {
+  "Hibachi & Hot Specialties": {
+    sections: [
+      {
+        title: "Hibachi",
+        description: "All hibachi entrees include miso soup or clear soup, stir-fried hibachi vegetables, and steamed rice. Fried rice substitute +3",
+        items: [
+          { name: "New York", price: "$35" },
+          { name: "Chicken", price: "$24" },
+          { name: "Shrimp", price: "$33" },
+          { name: "Salmon", price: "$31" },
+          { name: "New York & Chicken", price: "$36" },
+          { name: "New York & Shrimp", price: "$38" },
+          { name: "Veggies", price: "$21" },
+        ],
+      },
+      {
+        title: "Hot Specialties",
+        description: "All hot specialties include miso soup or clear soup, and steamed rice. Fried rice substitute +3",
+        items: [
+          { name: "Saba Shioyaki", description: "Perfectly grilled Norwegian mackerel with house ponzu", price: "$26" },
+          { name: "Black Cod", description: "Black cod, marinated with house-made Saikyo miso, served with light tempura enoki", price: "$32" },
+          { name: "Pork Belly Rice", description: "Stir-fried rice with roast pork, fresh vegetables and egg", price: "$29" },
+          { name: "Modley Tempura Dinner", description: "Crispy shrimp tempura (5pc, karaage) with mixed seasonal vegetable seeds", price: "$21" },
+          { name: "Range Chicken", description: "Grilled chicken in teriyaki sauce served crispy with seasonal vegetable seeds", price: "$22" },
+          { name: "Salmon Yuzu-Yaki", description: "Yuzu-marinated salmon served with sautéed seasonal vegetables", price: "$28" },
+        ],
+      },
+      {
+        title: "Ramen & Udon",
+        items: [
+          { name: "Tonkotsu Ramen", description: "Pork broth with pork chashu, menma, boiled egg, bean sprout, onion, black mushroom, nori. Add spicy +1", price: "$13" },
+          { name: "Nagasaki Seafood Ramen", description: "Pork broth, seafood, mixed vegetables, boiled egg", price: "$16" },
+          { name: "Miso Ramen", description: "Pork broth with miso chashu, boiled egg, green onion, bean sprout, menma, black mushroom, nori. Add spicy +1", price: "$14" },
+          { name: "Udon", description: "Udon noodles, with fish cake, nori, and green onions", price: "$13" },
+          { name: "Tempura Udon", description: "Udon noodles, with fried tempura, fish cake, nori, green onions", price: "$16" },
+          { name: "Yaki Udon or Yaki Soba", description: "Stir-fried Japanese noodles with vegetables and house-made sauce. Add chicken 5 / Beef 6 / Shrimp 7", price: "$12" },
+          { name: "Udon Carbonara", description: "Udon noodles in a creamy carbonara sauce with bacon, mushroom, and green onions", price: "$16" },
+          { name: "Asari Miso Soup", description: "Miso soup, clams, and scallions", price: "$7" },
+          { name: "Daikon Nashi Soup", description: "Daikon nashi flowers and scallions", price: "$8" },
+          { name: "Miso Soup / Clear Soup", price: "$4" },
+        ],
+      },
+    ],
+  },
+  "Hand Roll, Regular Roll & Sides": {
+    sections: [
+      {
+        title: "Hand Roll",
+        items: [
+          { name: "Salmon", price: "$5" },
+          { name: "Spicy Salmon", price: "$6" },
+          { name: "Tuna", price: "$6" },
+          { name: "Spicy Tuna", price: "$7" },
+          { name: "Yellowtail (Hamachi)", price: "$7" },
+          { name: "Spicy Yellowtail", price: "$7" },
+          { name: "Flounder (Hirame)", price: "$7" },
+          { name: "Eel (Unagi)", price: "$7" },
+          { name: "Scallop (Hotate)", price: "$7" },
+          { name: "Chutoro", price: "$7" },
+          { name: "Real Crabmeat", price: "$7" },
+          { name: "Ebi Katsu (Shrimp Tempura)", price: "$7" },
+          { name: "Sea Bream (Madai)", price: "$7" },
+          { name: "Kanikachi Katsu (Amberjack Tempura)", price: "$7" },
+        ],
+      },
+      {
+        title: "Regular Roll",
+        items: [
+          { name: "Real Crab Roll", description: "Snow crab, avocado, masago", price: "$14" },
+          { name: "Basic Roll", description: "Tuna or Yellowtail", price: "$9" },
+          { name: "Shrimp Tempura Roll", description: "Shrimp tempura, crab meat, cucumber, avocado, ashi eel sauce", price: "$11" },
+          { name: "California Roll", description: "Crab meat, avocado, cucumber", price: "$9" },
+          { name: "Eel", description: "Eel, avocado, cucumber with eel sauce", price: "$11" },
+          { name: "Philadelphia Roll", description: "Smoked salmon, cream cheese, avocado", price: "$11" },
+          { name: "Spicy Salmon Roll", description: "Spicy salmon, cucumber", price: "$10" },
+          { name: "Spicy California Roll", description: "Spicy crab meat, avocado, cucumber", price: "$10" },
+          { name: "Spicy Tuna Roll", description: "Spicy tuna, cucumber", price: "$10" },
+          { name: "Spicy Yellowtail Roll", description: "Spicy yellowtail, cucumber", price: "$11" },
+          { name: "Spider Roll", description: "Soft shell crab, tempura, crab meat, avocado, cucumber, mango, seasoned eel soy paper with eel sauce", price: "$14" },
+          { name: "Veggie Roll", description: "Asparagus, avocado, cucumber, yamgobo, kaiwara", price: "$10" },
+          { name: "Salmon Avocado Roll", description: "Salmon, avocado", price: "$10" },
+          { name: "Avocado Roll", description: "Avocado", price: "$7" },
+        ],
+      },
+      {
+        title: "Sushi Bar Sides",
+        items: [
+          { name: "Sushi Rice", price: "$4" },
+          { name: "Steam Rice", price: "$3" },
+          { name: "Fresh Wasabi", price: "$3" },
+          { name: "Kizami Wasabi", price: "$3" },
+        ],
+      },
+    ],
+  },
+  "Bake Roll, Roll without Rice, Deep Fried Roll & Dessert": {
+    sections: [
+      {
+        title: "Bake Roll",
+        items: [
+          { name: "Volcano Roll", description: "Crabmeal and avocado, topped with baked crabmeat, crabmeal and scallop finished eel sauce, and spicy mayo", price: "$17" },
+          { name: "Baked Salmon Roll", description: "Crabmeal and avocado, topped with salmon, and eel sauce", price: "$17" },
+          { name: "Baked Shrimp Roll", description: "Crabmeal and avocado, topped with shrimp, and eel sauce", price: "$17" },
+        ],
+      },
+      {
+        title: "Roll without Rice",
+        items: [
+          { name: "Cherry Blossom Roll", description: "Salmon, cucumber, avocado, and crabmeal, topped with tuna, mango, and orange slices", price: "$20" },
+          { name: "Ultimate Shrimp Roll", description: "Shrimp tempura, spicy crab, and avocado, topped with tuna, salmon, yellowtail, butter shrimp, spice, jalapeno, creamy ponzu, and spicy mayo", price: "$24" },
+          { name: "Aurora Roll", description: "Shrimp tempura, spicy tuna, and crabmeal, topped with tuna, salmon, caviar, spicy ponzu, and ebi tempura", price: "$20" },
+          { name: "Pure Sashimi Roll", description: "Salmon, tuna, hamachi, spicy tuna-gyro mix, and avocado wrapped in rice paper with spicy ponzu and sweet chili sauce", price: "$20" },
+          { name: "Tropical Roll", description: "Tuna, salmon, yellowtail, white fish, crabmeal, and avocado wrapped in cucumber with spicy creamy ponzu sauce", price: "$18" },
+        ],
+      },
+      {
+        title: "Deep Fried Roll",
+        items: [
+          { name: "Crazy Boy Roll", description: "Crabmeal and cream cheese, deep fried, topped with spicy tuna, jalapeno, eel sauce, and spicy mayo", price: "$18" },
+          { name: "Crunch Roll", description: "Shrimp tempura, crab meat, and avocado, topped with crunch, and eel sauce", price: "$14" },
+          { name: "Crispy California Roll", description: "Deep fried california roll with eel sauce", price: "$13" },
+        ],
+      },
+      {
+        title: "Dessert",
+        items: [
+          { name: "Ice Cream (vanilla, green tea)", price: "$7" },
+          { name: "Deep Fried Banana Ice Cream", price: "$14" },
+          { name: "Mochi Ice Cream", price: "$7" },
+          { name: "Cheesecake", price: "$7" },
+          { name: "Sugar Glass Tomatoes", price: "$8" },
+          { name: "Fresh Cream & Mixed Fruits", price: "$15" },
+        ],
+      },
+    ],
+  },
+  "Sushi Bar": {
+    items: [
+      { name: "Toro Toro Duo", description: "Minced fatty toro and diced with salmon and caviar, wrapped in soft nori roll with crispy rice topping", price: "$34" },
+      { name: "Maki Combo", description: "Toro, hamachi, and salmon with avocado and mango, served 3 pieces each with crispy rice and chili oil", price: "$23" },
+      { name: "Spicy Seared Tuna", description: "Seared spicy tuna with spicy mayo, spicy sauce and salmon", price: "$18" },
+      { name: "Hamachi Jalapeño", description: "Hamachi with jalapeño, spicy mayo, and miso sauce", price: "$19" },
+      { name: "Salmon Carpaccio", description: "Thinly sliced salmon with ponzu and citrus, garnish with micro-greens, then served with crispy rice and chili oil", price: "$16" },
+      { name: "Asian Bacon Seared Ceviche", description: "Seared diced tuna, salmon, spicy tuna, and crispy eel, topped with micro-greens with chili rice sauce", price: "$18" },
+      { name: "Fried Sea Urchin", description: "Marinated sea urchin with butter eel, scallion, finished with fully fried jalapeño pepper", price: "$18" },
+      { name: "Spicy Scallop Medley", description: "Delicate scallop mixed with spicy diced jalapeño, crispy fried chili, miso, and fresh onions", price: "$17" },
+      { name: "Sashimi Ahi (Toro by Salmon or Hamachi)", description: "Sliced fresh fish, topped with ponzu and citrus, garnish with micro-greens", price: "$15" },
+      { name: "Crispy Rice Bites (Toro is Salmon)", description: "Crispy crispy rice topped with spicy jalapeño sauce, eel sauce, and spicy mayo, eel, miso", price: "$16" },
+      { name: "The Wine Street Hidden", description: "Sweet smoked complemented by a crispy seared scallop eel fried assorted pieces", price: "$20" },
+      { name: "Sashimi Wrap Aged Roll (for Roe)", description: "Seared scallop wrapped with cucumber, combined with spicy tuna, crab meat, and avocado, elegantly wrapped in rice and served with a special soy-garlic sauce", price: "$21" },
+      { name: "Smoked Hamachi Carpaccio", description: "Smoked hamachi, served in carpaccio with tamo sprinkled sauce", price: "$29" },
+      { name: "Caviar", description: "Chef's choice of assorted fresh-caught served eel assorted roe eel with miso chili sauce", price: "$27" },
+      { name: "Hazelnut Poke", description: "Diced fresh tuna with cucumber, scalloped eel mango and furikake in a soy-vin", price: "$22" },
+      { name: "Hive Display (Korean Sashimi Rice Bowl)", description: "Mixed salmon over rice with fresh vegetables, served with Korean spicy gochujang sauce and miso eel rice soup", price: "$24" },
+      { name: "Kame Tower (Toro or Salmon)", description: "Layered sashimi with spicy mayo, spicy mayo, topped with eel sauce, spicy mayo, and sesame sauce", price: "$19" },
+      { name: "Flame Kissed Scallop", description: "Seared scallop with dry mustard and flame signature sauce", price: "$18" },
+      { name: "Flame Toro Toro", description: "Flash-seared toro toro topped with caviar, served with soy-toasted and flame signature sauce", price: "$18" },
+    ],
+  },
+  "Sushi & Sashimi": {
+    items: [
+      { name: "Toro", description: "Premium fatty tuna — 2 pcs sushi or 3 pcs sashimi", price: "$10 / $18" },
+      { name: "Fatty Toro", description: "Extra fatty toro — 2 pcs sushi or 3 pcs sashimi", price: "$8 / $23" },
+      { name: "Otoro", description: "Highest grade fatty tuna — 2 pcs sushi or 3 pcs sashimi", price: "$9 / $25" },
+      { name: "Chu Toro", description: "Medium fatty tuna — 2 pcs sushi or 3 pcs sashimi", price: "$8 / $21" },
+      { name: "Hamachi", description: "Yellowtail — 2 pcs sushi or 3 pcs sashimi", price: "$5 / $14" },
+      { name: "Akagi", description: "Red snapper — 2 pcs sushi or 3 pcs sashimi", price: "$5 / $14" },
+      { name: "Sake", description: "Fresh salmon — 2 pcs sushi or 3 pcs sashimi", price: "$6 / $14" },
+      { name: "Sake Toro", description: "Fatty salmon — 2 pcs sushi or 3 pcs sashimi", price: "$6 / $14" },
+      { name: "Maguro", description: "Bluefin tuna — 2 pcs sushi or 3 pcs sashimi", price: "$5 / $12" },
+      { name: "King Sake", description: "King salmon — 2 pcs sushi or 3 pcs sashimi", price: "$5 / $14" },
+      { name: "Tai", description: "Red snapper — 2 pcs sushi or 3 pcs sashimi", price: "$5 / $12" },
+      { name: "Tamago Sushi Toro", description: "Egg custard with fatty tuna — 2 pcs sushi or 3 pcs sashimi", price: "$6 / $14" },
+      { name: "Uni (Sea Urchin)", description: "Sea urchin — 2 pcs sushi or 3 pcs sashimi", price: "$8 / $24" },
+      { name: "Smoked Sake", description: "Smoked salmon — 2 pcs sushi or 3 pcs sashimi", price: "$5 / $14" },
+      { name: "Ama Ebi", description: "Sweet shrimp — 2 pcs sushi or 3 pcs sashimi", price: "$8 / $23" },
+      { name: "Tamago Yaki", description: "Egg custard — 2 pcs sushi or 3 pcs sashimi", price: "$5 / $9" },
+      { name: "Aji Miyazaki", description: "Horse mackerel — 2 pcs sushi", price: "$11" },
+      { name: "Tamago Scallop-Hokkaido Uni", description: "Scallop with sea urchin — 2 pcs sushi or 3 pcs sashimi", price: "$13 / $28" },
+      { name: "Hotate + Fake Grass", description: "Scallop with garnish — 2 pcs sushi or 3 pcs sashimi", price: "$10 / $28" },
+      { name: "Hotate Sauce with Ikura", description: "Scallop with salmon roe — 2 pcs sushi or 3 pcs sashimi", price: "$10 / $27" },
+      { name: "Hotate", description: "Scallop — 2 pcs sushi or 3 pcs sashimi", price: "$7 / $20" },
+      { name: "Smoked scallop with yuzu salt", description: "Smoked scallop — 2 pcs sushi or 3 pcs sashimi", price: "$9 / $14" },
+      { name: "Kawaski", description: "Amberjack — 2 pcs sushi or 3 pcs sashimi", price: "$5 / $13" },
+      { name: "Aji", description: "Horse mackerel — 2 pcs sushi or 3 pcs sashimi", price: "$6 / $12" },
+      { name: "Black Dag", description: "Black snapper — 2 pcs sushi", price: "$17" },
+      { name: "Uni", description: "Sea urchin — 2 pcs sushi or 3 pcs sashimi", price: "$5 / $11" },
+    ],
+  },
+  "Moriawase & Chef's Trust Me": {
+    sections: [
+      {
+        title: "Moriawase",
+        items: [
+          { name: "Chef choice Sushi - Classic (8pcs)", price: "$28" },
+          { name: "Chef choice Sushi - Kame Premium (9pcs)", price: "$45" },
+        ],
+      },
+      {
+        title: "Chef choice Sashimi",
+        items: [
+          { name: "A (8 pcs 4 kinds)", price: "$32" },
+          { name: "B (12 pcs 4 kinds)", price: "$48" },
+          { name: "C (20 pcs 4 kinds)", price: "$95" },
+        ],
+      },
+      {
+        title: "Chef's Trust Me 49",
+        description: "Thinly sliced hamachi, yellowtail, toro, salmon, spicy tuna, scallop, and eel with special spicy sauce.",
+        items: [
+          { name: "Chef's Trust Me 49", price: "$49" },
+        ],
+      },
+      {
+        title: "The Kame Trust Me 59",
+        description: "Premium omakase featuring toro, spicy toro, toro & salmon sashimi, yellowtail belly, sea bass, aji, hamachi, shrimp, uni, and blue crab hand roll.",
+        items: [
+          { name: "The Kame Trust Me 59", price: "$59" },
+        ],
+      },
+    ],
+  },
+  "Special Roll": {
+    items: [
+      { name: "Kame Roll", description: "Spicy tuna, spicy eel, cucumber, crab meat and avocado, topped with toro tuna and salmon spicy tuna", price: "$22" },
+      { name: "Spicy Kame Roll", description: "Spicy tuna, cucumber and avocado, topped with spicy tuna and eel tuna with spicy mayo", price: "$18" },
+      { name: "Shofin Lover Roll", description: "Spicy tuna, cucumber, spicy tuna mayo, spicy tuna, topped with shofin tuna and scallop with spicy tuna ponzu and eel sauce", price: "$23" },
+      { name: "Rainbow Roll", description: "Spicy tuna, cucumber, spicy tuna, topped with rainbow fresh fish with spicy ponzu", price: "$17" },
+      { name: "Dancing Eel Roll", description: "Shrimp tempura, eel and asparagus, topped eel with eel sauce", price: "$17" },
+      { name: "Spicy Crunch Eel Roll", description: "Spicy tuna, mango, roasted chili, and cucumber, topped with roasted shrimp tuna spicy cilantro eel garlic ponzu clam", price: "$21" },
+      { name: "Shrimp Lover Roll", description: "Shrimp tempura, spicy tuna, topped with shrimp tempura and spicy mayo", price: "$18" },
+      { name: "Salmon Fire Roll", description: "Spicy salmon with scallop and asparagus, topped eel spiced salmon, spicy tuna, and topped with spicy", price: "$20" },
+      { name: "Spicy Salmon Roll", description: "Spicy salmon, spicy tuna, cucumber, topped with spicy tuna ponzu and eel sauce", price: "$19" },
+      { name: "Paradise Roll", description: "Spicy tuna, spicy crab, scallop, and shrimp tempura, topped with salmon, toro, shrimp tuna and topped eel coat with eel", price: "$19" },
+      { name: "Crunch Roll", description: "Shrimp tempura, crab meat, and avocado, topped with crunchy spicy mayo, spicy mayo, roasted spicy tuna, topped eel", price: "$25" },
+      { name: "Kame Spicy Roll", description: "Spicy tuna, cucumber, and avocado, topped with spicy tuna, mango tuna, and topped with spicy ponzu", price: "$18" },
+      { name: "Tempura Roll", description: "Shrimp tempura, cream cheese, and avocado, topped with spicy tuna, eel ponzu, spicy mayo and eel sauce", price: "$25" },
+      { name: "Lobster Roll", description: "Spicy tuna, lobster, and avocado, topped with lobster tempura, spicy spicy tuna, and eel sauce", price: "$23" },
+      { name: "Spicy Tuna Roll", description: "Spicy tuna, cucumber, topped with spicy tuna, spicy tuna, avocado and spicy ponzu sauce", price: "$15" },
+      { name: "PGA Dragon Roll", description: "Spicy tuna, mango, spicy tuna, avocado, topped with spicy tuna, eel sauce, spicy mayo, and salmon", price: "$21" },
+      { name: "Angry Mango Roll", description: "Spicy tuna, mango, and cucumber wrapped in rice paper, topped with mango, spicy eel sauce and sriracha", price: "$18" },
+      { name: "Mango Tango Roll", description: "Salmon, avocado, mango, and spicy tuna, topped with mango, spicy tuna, mango sauce, and sriracha", price: "$20" },
+      { name: "Unagi Lover Roll", description: "Eel, cucumber, and cucumber avocado, topped with eel sauce and spicy mayo, topped with eel sauce and baby shrimp, finished with spicy ponzu", price: "$21" },
+      { name: "Monster Roll", description: "Spicy tuna, baby shrimp, and avocado, topped with deep fried crabmeat and baby shrimp", price: "$17" },
+      { name: "Crunchy Crunch Roll", description: "Crunchy, roasted crab, spicy tuna, topped with eel fried crabmeat, mango, and eel sauce", price: "$11" },
+      { name: "Salmon Tempura Roll", description: "Crabmeat, cucumber and avocado, topped with salmon tempura, spicy tuna, mango, and eel sauce and sauce", price: "Market Price" },
+    ],
+  },
 };
 
 const hours = [
@@ -280,7 +328,6 @@ function Navbar() {
     { href: "#about", label: "About" },
     { href: "#menu", label: "Menu" },
     { href: "#gallery", label: "Gallery" },
-    { href: "#bar", label: "Bar" },
     { href: "#visit", label: "Visit" },
   ];
 
@@ -487,10 +534,22 @@ function HeroSection() {
 }
 
 function MenuSection() {
-  const [activeTab, setActiveTab] = useState<MenuCategory>("Signature");
+  const [activeTab, setActiveTab] = useState<MenuCategory>("Hibachi & Hot Specialties");
   const { ref, inView } = useInView();
 
-  const tabs: MenuCategory[] = ["Signature", "Sushi & Nigiri", "Sashimi", "Rolls", "Kitchen", "Bar"];
+  const tabs: MenuCategory[] = [
+    "Hibachi & Hot Specialties",
+    "Hand Roll, Regular Roll & Sides",
+    "Bake Roll, Roll without Rice, Deep Fried Roll & Dessert",
+    "Sushi Bar",
+    "Sushi & Sashimi",
+    "Moriawase & Chef's Trust Me",
+    "Special Roll",
+  ];
+
+  const currentData = menuData[activeTab];
+  const hasSubsections = "sections" in currentData && currentData.sections;
+  const items = ("items" in currentData ? currentData.items : []) as MenuItem[];
 
   return (
     <section
@@ -526,7 +585,7 @@ function MenuSection() {
             <button
               key={tab}
               onClick={() => setActiveTab(tab)}
-              className="px-4 py-2 rounded-full transition-all duration-200 text-sm font-medium"
+              className="px-3 py-2 rounded-full transition-all duration-200 text-xs md:text-sm font-medium"
               style={{
                 background: activeTab === tab ? "oklch(0.72 0.12 75)" : "oklch(0.15 0.006 240)",
                 color: activeTab === tab ? "oklch(0.10 0.005 240)" : "oklch(0.85 0.005 65)",
@@ -538,82 +597,125 @@ function MenuSection() {
           ))}
         </div>
 
-        {/* Menu Items Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {menuData[activeTab].map((item, idx) => (
-            <div
-              key={idx}
-              className="p-6 rounded-lg transition-all duration-300 hover:scale-105 active:scale-95"
-              style={{
-                background: "oklch(0.15 0.006 240)",
-                border: "1px solid oklch(1 0 0 / 10%)",
-              }}
-            >
-              {item.image && (
-                <img
-                  src={item.image}
-                  alt={item.name}
-                  className="w-full h-40 object-cover rounded-md mb-4"
-                />
-              )}
-              <div className="flex items-start justify-between mb-2">
-                <div>
-                  <h3
-                    className="text-lg font-bold"
+        {/* Menu Items */}
+        {hasSubsections && currentData.sections ? (
+          <div className="space-y-12">
+            {currentData.sections.map((section, sIdx) => (
+              <div key={sIdx}>
+                <h3
+                  className="text-2xl md:text-3xl font-bold mb-2"
+                  style={{
+                    fontFamily: "'Playfair Display', serif",
+                    color: "oklch(0.95 0.002 65)",
+                  }}
+                >
+                  {section.title}
+                </h3>
+                {section.description && (
+                  <p
+                    className="text-sm mb-6"
                     style={{
-                      fontFamily: "'Playfair Display', serif",
-                      color: "oklch(0.95 0.002 65)",
+                      fontFamily: "'Lato', sans-serif",
+                      color: "oklch(0.72 0.12 75)",
+                      fontStyle: "italic",
                     }}
                   >
-                    {item.name}
-                  </h3>
-                  {item.nameJp && (
-                    <p
-                      className="text-sm"
+                    {section.description}
+                  </p>
+                )}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  {section.items.map((item, idx) => (
+                    <div
+                      key={idx}
+                      className="p-6 rounded-lg transition-all duration-300 hover:scale-105 active:scale-95"
                       style={{
-                        fontFamily: "'Noto Serif JP', serif",
-                        color: "oklch(0.72 0.12 75)",
+                        background: "oklch(0.15 0.006 240)",
+                        border: "1px solid oklch(1 0 0 / 10%)",
                       }}
                     >
-                      {item.nameJp}
-                    </p>
-                  )}
+                      <div className="flex items-start justify-between mb-2">
+                        <h4
+                          className="text-lg font-bold"
+                          style={{
+                            fontFamily: "'Playfair Display', serif",
+                            color: "oklch(0.95 0.002 65)",
+                          }}
+                        >
+                          {item.name}
+                        </h4>
+                      </div>
+                      {item.description && (
+                        <p
+                          className="text-sm mb-3"
+                          style={{
+                            fontFamily: "'Lato', sans-serif",
+                            color: "oklch(0.75 0.005 65)",
+                            lineHeight: 1.5,
+                          }}
+                        >
+                          {item.description}
+                        </p>
+                      )}
+                      <p
+                        className="text-lg font-semibold"
+                        style={{
+                          fontFamily: "'Playfair Display', serif",
+                          color: "oklch(0.72 0.12 75)",
+                        }}
+                      >
+                        {item.price}
+                      </p>
+                    </div>
+                  ))}
                 </div>
-                {item.badge && (
-                  <span
-                    className="px-3 py-1 rounded-full text-xs font-semibold whitespace-nowrap ml-2"
+              </div>
+            ))}
+          </div>
+        ) : (
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {items.map((item, idx) => (
+              <div
+                key={idx}
+                className="p-6 rounded-lg transition-all duration-300 hover:scale-105 active:scale-95"
+                style={{
+                  background: "oklch(0.15 0.006 240)",
+                  border: "1px solid oklch(1 0 0 / 10%)",
+                }}
+              >
+                <h4
+                  className="text-lg font-bold mb-2"
+                  style={{
+                    fontFamily: "'Playfair Display', serif",
+                    color: "oklch(0.95 0.002 65)",
+                  }}
+                >
+                  {item.name}
+                </h4>
+                {item.description && (
+                  <p
+                    className="text-sm mb-3"
                     style={{
-                      background: "oklch(0.72 0.12 75 / 20%)",
-                      color: "oklch(0.72 0.12 75)",
                       fontFamily: "'Lato', sans-serif",
+                      color: "oklch(0.75 0.005 65)",
+                      lineHeight: 1.5,
                     }}
                   >
-                    {item.badge}
-                  </span>
+                    {item.description}
+                  </p>
                 )}
+                <p
+                  className="text-lg font-semibold"
+                  style={{
+                    fontFamily: "'Playfair Display', serif",
+                    color: "oklch(0.72 0.12 75)",
+                  }}
+                >
+                  {item.price}
+                </p>
               </div>
-              <p
-                className="text-sm mb-3"
-                style={{
-                  fontFamily: "'Lato', sans-serif",
-                  color: "oklch(0.75 0.005 65)",
-                  lineHeight: 1.5,
-                }}
-              >
-                {item.description}
-              </p>
-              <p
-                className="text-lg font-semibold"
-                style={{
-                  fontFamily: "'Playfair Display', serif",
-                  color: "oklch(0.72 0.12 75)",
-                }}
-              >
-                {item.price}
-              </p>
-            </div>
-          ))}
-        </div>
+            ))}
+          </div>
+        )}
       </div>
     </section>
   );
@@ -667,100 +769,6 @@ function GallerySection() {
                 className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                 style={{ background: "oklch(0 0 0 / 40%)" }}
               />
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
-
-function BarSection() {
-  const { ref, inView } = useInView();
-
-  return (
-    <section
-      id="bar"
-      ref={ref}
-      className="py-20 md:py-32 px-6"
-      style={{
-        background: "oklch(0.10 0.005 240)",
-        opacity: inView ? 1 : 0.5,
-        transform: inView ? "translateY(0)" : "translateY(20px)",
-        transition: "all 800ms ease-out",
-      }}
-    >
-      <div className="max-w-6xl mx-auto">
-        <h2
-          className="text-5xl md:text-6xl font-bold text-center mb-4"
-          style={{
-            fontFamily: "'Playfair Display', serif",
-            color: "oklch(0.95 0.002 65)",
-          }}
-        >
-          Premium Bar
-        </h2>
-        <div
-          className="w-24 h-1 bg-gradient-to-r from-transparent via-amber-600 to-transparent mx-auto mb-16"
-          style={{ background: "linear-gradient(90deg, transparent, oklch(0.72 0.12 75), transparent)" }}
-        />
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {menuData["Bar"].map((item, idx) => (
-            <div
-              key={idx}
-              className="p-8 rounded-lg transition-all duration-300 hover:scale-105"
-              style={{
-                background: "oklch(0.15 0.006 240)",
-                border: "1px solid oklch(1 0 0 / 10%)",
-              }}
-            >
-              {item.image && (
-                <img
-                  src={item.image}
-                  alt={item.name}
-                  className="w-full h-48 object-cover rounded-md mb-6"
-                />
-              )}
-              <h3
-                className="text-2xl font-bold mb-2"
-                style={{
-                  fontFamily: "'Playfair Display', serif",
-                  color: "oklch(0.95 0.002 65)",
-                }}
-              >
-                {item.name}
-              </h3>
-              {item.nameJp && (
-                <p
-                  className="text-sm mb-3"
-                  style={{
-                    fontFamily: "'Noto Serif JP', serif",
-                    color: "oklch(0.72 0.12 75)",
-                  }}
-                >
-                  {item.nameJp}
-                </p>
-              )}
-              <p
-                className="text-base mb-4"
-                style={{
-                  fontFamily: "'Lato', sans-serif",
-                  color: "oklch(0.75 0.005 65)",
-                  lineHeight: 1.6,
-                }}
-              >
-                {item.description}
-              </p>
-              <p
-                className="text-xl font-semibold"
-                style={{
-                  fontFamily: "'Playfair Display', serif",
-                  color: "oklch(0.72 0.12 75)",
-                }}
-              >
-                {item.price}
-              </p>
             </div>
           ))}
         </div>
@@ -961,7 +969,6 @@ export default function Home() {
       <HeroSection />
       <MenuSection />
       <GallerySection />
-      <BarSection />
       <VisitSection />
       <Footer />
     </div>

@@ -10,12 +10,16 @@ import { MapPin, Phone, Clock, ChevronDown, Menu, X, Instagram } from "lucide-re
 import { MapView } from "@/components/Map";
 
 // ── Image URLs ──────────────────────────────────────────────────────────────
-const HERO_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663684356858/guW3a8JT7hCMuUFDTFFuEY/hero_sushi_bar-ZSAUDxiFmZkBUXpZa5KZND.webp";
-const SUSHI_PLATTER = "https://d2xsxph8kpxj0f.cloudfront.net/310519663684356858/guW3a8JT7hCMuUFDTFFuEY/sushi_platter-M6p8ySqZpzBzGjfxfF8xks.webp";
-const SUSHI_TOWER = "https://d2xsxph8kpxj0f.cloudfront.net/310519663684356858/guW3a8JT7hCMuUFDTFFuEY/sushi_tower-29iVtMqSHZPePPacHqgUYQ.webp";
-const SAKE_COCKTAILS = "https://d2xsxph8kpxj0f.cloudfront.net/310519663684356858/guW3a8JT7hCMuUFDTFFuEY/sake_cocktails-8XrxTUoFcFkf9FGheUi2yj.webp";
-const INTERIOR_DINING = "https://d2xsxph8kpxj0f.cloudfront.net/310519663684356858/guW3a8JT7hCMuUFDTFFuEY/interior_dining-dJAKAGNtwp5pW2UTmygCxs.webp";
-const SASHIMI_PLATE = "https://d2xsxph8kpxj0f.cloudfront.net/310519663684356858/guW3a8JT7hCMuUFDTFFuEY/sashimi_plate-GQjr3QD6YFmEtSWT6i2hpS.webp";
+const KAME_LOGO = "/manus-storage/kame_logo_ea019b3a.webp";
+const HERO_IMG = "/manus-storage/food_1_7cb4b6ff.jpg";
+const SUSHI_PLATTER = "/manus-storage/food_2_4fe1bb92.jpg";
+const SUSHI_TOWER = "/manus-storage/food_3_24cc57ef.jpg";
+const SAKE_COCKTAILS = "/manus-storage/food_4_9ff43c7e.jpg";
+const INTERIOR_DINING = "/manus-storage/food_5_ad48ce9e.jpg";
+const SASHIMI_PLATE = "/manus-storage/food_6_d09769b2.jpg";
+const FOOD_7 = "/manus-storage/food_7_798ca423.jpg";
+const FOOD_8 = "/manus-storage/food_8_0bc050e7.jpg";
+const FOOD_9 = "/manus-storage/food_9_1971fc9b.jpg";
 
 // ── Data ─────────────────────────────────────────────────────────────────────
 type MenuCategory = "Hibachi & Hot Specialties" | "Hand Roll, Regular Roll & Sides" | "Bake Roll, Roll without Rice, Deep Fried Roll & Dessert" | "Sushi Bar" | "Sushi & Sashimi" | "Moriawase & Chef's Trust Me" | "Special Roll";
@@ -344,22 +348,12 @@ function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
         {/* Logo */}
-        <a href="#" className="flex flex-col leading-none">
-          <span
-            className="text-2xl font-bold tracking-wider"
-            style={{
-              fontFamily: "'Playfair Display', serif",
-              color: "oklch(0.72 0.12 75)",
-            }}
-          >
-            KAME
-          </span>
-          <span
-            className="text-[0.55rem] tracking-[0.35em] uppercase"
-            style={{ color: "oklch(0.60 0.01 85)", fontFamily: "'Lato', sans-serif", fontWeight: 700 }}
-          >
-            SUSHI · FRISCO
-          </span>
+        <a href="#" className="flex items-center">
+          <img
+            src={KAME_LOGO}
+            alt="Kame Sushi Logo"
+            className="h-12 w-auto"
+          />
         </a>
 
         {/* Desktop links */}
@@ -723,7 +717,7 @@ function MenuSection() {
 
 function GallerySection() {
   const { ref, inView } = useInView();
-  const images = [SUSHI_PLATTER, SUSHI_TOWER, SASHIMI_PLATE, INTERIOR_DINING, SAKE_COCKTAILS, HERO_IMG];
+  const images = [SUSHI_PLATTER, SUSHI_TOWER, SASHIMI_PLATE, INTERIOR_DINING, SAKE_COCKTAILS, FOOD_7, FOOD_8, FOOD_9];
 
   return (
     <section

@@ -10,16 +10,16 @@ import { MapPin, Phone, Clock, ChevronDown, Menu, X, Instagram } from "lucide-re
 import { MapView } from "@/components/Map";
 
 // ── Image URLs ──────────────────────────────────────────────────────────────
-const KAME_LOGO = "/manus-storage/kame_logo_ea019b3a.webp";
-const HERO_IMG = "/manus-storage/food_1_7cb4b6ff.jpg";
-const SUSHI_PLATTER = "/manus-storage/food_2_4fe1bb92.jpg";
-const SUSHI_TOWER = "/manus-storage/food_3_24cc57ef.jpg";
-const SAKE_COCKTAILS = "/manus-storage/food_4_9ff43c7e.jpg";
-const INTERIOR_DINING = "/manus-storage/food_5_ad48ce9e.jpg";
-const SASHIMI_PLATE = "/manus-storage/food_6_d09769b2.jpg";
-const FOOD_7 = "/manus-storage/food_7_798ca423.jpg";
-const FOOD_8 = "/manus-storage/food_8_0bc050e7.jpg";
-const FOOD_9 = "/manus-storage/food_9_1971fc9b.jpg";
+const KAME_LOGO = "/manus-storage/kame_logo_temp_5aa1a072.jpg";
+const HERO_IMG = "/manus-storage/food_1_temp_108d367d.jpg";
+const SUSHI_PLATTER = "/manus-storage/food_2_temp_c5980ad1.jpg";
+const SUSHI_TOWER = "/manus-storage/food_3_temp_590bfca4.jpg";
+const SAKE_COCKTAILS = "/manus-storage/food_4_temp_e1188667.jpg";
+const INTERIOR_DINING = "/manus-storage/food_5_temp_360be7d4.jpg";
+const SASHIMI_PLATE = "/manus-storage/food_6_temp_aec3ab44.jpg";
+const FOOD_7 = "/manus-storage/food_7_temp_a59ff46b.jpg";
+const FOOD_8 = "/manus-storage/food_8_temp_ce043936.jpg";
+const FOOD_9 = "/manus-storage/food_9_temp_9248f91b.jpg";
 
 // ── Data ─────────────────────────────────────────────────────────────────────
 type MenuCategory = "Hibachi & Hot Specialties" | "Hand Roll, Regular Roll & Sides" | "Bake Roll, Roll without Rice, Deep Fried Roll & Dessert" | "Sushi Bar" | "Sushi & Sashimi" | "Moriawase & Chef's Trust Me" | "Special Roll";

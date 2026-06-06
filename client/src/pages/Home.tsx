@@ -22,7 +22,7 @@ const FOOD_8 = "/manus-storage/food_8_temp_ce043936.jpg";
 const FOOD_9 = "/manus-storage/food_9_temp_9248f91b.jpg";
 
 // ── Data ─────────────────────────────────────────────────────────────────────
-type MenuCategory = "Hibachi & Hot Specialties" | "Hand Roll, Regular Roll & Sides" | "Bake Roll, Roll without Rice, Deep Fried Roll & Dessert" | "Sushi Bar" | "Sushi & Sashimi" | "Moriawase & Chef's Trust Me" | "Special Roll";
+type MenuCategory = "Starter" | "Salad" | "Hibachi & Hot Specialties" | "Hand Roll, Regular Roll & Sides" | "Bake Roll, Roll without Rice, Deep Fried Roll & Dessert" | "Sushi Bar" | "Sushi & Sashimi ( Sushi 1PC / Sashimi 3PCS )" | "Moriawase & Chef's Trust Me" | "Special Roll";
 
 interface MenuItem {
   name: string;
@@ -44,6 +44,54 @@ interface MenuCategoryData {
 }
 
 const menuData: Record<MenuCategory, MenuCategoryData> = {
+  "Starter": {
+    sections: [
+      {
+        title: "Starter",
+        items: [
+          { name: "Okonomiyaki", description: "Japanese style pancake with seafood shaved bonito.", price: "$16" },
+          { name: "Kara-A-GE Chicken", description: "Japanese style marinated deep-fried chicken", price: "$12" },
+          { name: "Shrimp Tempura (5pc)", description: "Crispy lightly battered shrimp tempura, served with tempura dipping sauce", price: "$12" },
+          { name: "Vegetable Tempura", description: "Kakiage with mixed vegetable tempura", price: "$14" },
+          { name: "Nasu Dengaku", description: "Grilled Japanese eggplant with house-made sweet miso sauce, shaved bonito, and sesame", price: "$13" },
+          { name: "Takoyaki", description: "Japanese-style octopus balls, lightly grilled and served with savory sauce", price: "$13" },
+          { name: "Fried Calamari", description: "Crispy battered squid, served with dipping sauce", price: "$13" },
+          { name: "Avocado Bomb", description: "Stuffed with spicy tuna and crabmeat, topped with green onion topped with eel sauce and spicy mayo", price: "$13" },
+          { name: "Shishito Peppers", description: "Lightly blistered and seasoned, topped with bushikatsuo, and served with ponzu sauce and yuzu", price: "$10" },
+          { name: "Panko Oyster", description: "Bread-crusted and deep-fried, served with shaved garnish and cilantro aioli", price: "$16" },
+          { name: "Brussel Sprout", description: "Lightly fried brussels sprout tossed with house sweet chili sauce", price: "$10" },
+          { name: "Horenso Gomae", description: "Blanched spinach dressed in a savory Japanese sesame sauce.", price: "$6" },
+          { name: "Edamame", price: "$6" },
+          { name: "Garlic/Spicy Garlic Edamame", price: "$8" },
+          { name: "Gyoza Pork, Vegetable 5pc", description: "(Steamed) / Pan Fried+1 / Deep Fried+1", price: "$12" },
+          { name: "Egg Roll (Pork, Veggie) 2pc", price: "$7" },
+          { name: "Baked Red Snapper Tempura", description: "Crispy battered red snapper, lightly fried drizzled with house sauce", price: "$12" },
+          { name: "Fried Wonton Poke Nachos", description: "Topped with bluefin tuna, avocado, jalapeno, marinated in house poke sauce", price: "$18" },
+          { name: "Wagyu", description: "Tender, marbled Japanese-style beef, lightly seared on a hot stone and served with ponzu sauce", price: "$24" },
+          { name: "Heart Attack", description: "Stuffed with crabmeat and cream cheese, topped with eel sauce and spicy mayo", price: "$13" },
+          { name: "Soft Shell Crab Tempura", description: "Crispy battered soft-shell crab, served with ponzu sauce", price: "$13" },
+          { name: "Grilled Kama", description: "Grilled yellowtail collar with ponzu", price: "$16" },
+          { name: "Crab Rangoon", description: "Crispy fried wonton filled with a creamy blend of crab and cream cheese, served with sweet chili sauce", price: "$11" },
+        ],
+      },
+    ],
+  },
+  "Salad": {
+    sections: [
+      {
+        title: "Salad",
+        items: [
+          { name: "Ika Tomato Salad", description: "Fresh mixed greens, cherry tomatoes, blueberry, squid, sliced almonds, beetroot & choice of ginger or sesame dressing.", price: "$16" },
+          { name: "Spicy Sashimi Salad", description: "Fresh assorted sashimi with avocado, spicy sauce, and mixed greens.", price: "$22" },
+          { name: "Squid Salad", price: "$9" },
+          { name: "Seaweed Salad", price: "$7" },
+          { name: "Grilled Chicken Salad", description: "Fresh mixed greens, grilled chicken breast, cherry tomatoes, blueberry, sliced almonds, beetroot & choice of ginger or sesame dressing.", price: "$16" },
+          { name: "Green Salad", description: "Fresh mixed greens, tomatoes, avocado, cucumber, carrot with ginger dressing.", price: "$9" },
+          { name: "Cucumber Salad", price: "$8" },
+        ],
+      },
+    ],
+  },
   "Hibachi & Hot Specialties": {
     sections: [
       {
@@ -538,11 +586,13 @@ function MenuSection() {
   const { ref, inView } = useInView();
 
   const tabs: MenuCategory[] = [
+    "Starter",
+    "Salad",
     "Hibachi & Hot Specialties",
     "Hand Roll, Regular Roll & Sides",
     "Bake Roll, Roll without Rice, Deep Fried Roll & Dessert",
     "Sushi Bar",
-    "Sushi & Sashimi",
+    "Sushi & Sashimi ( Sushi 1PC / Sashimi 3PCS )",
     "Moriawase & Chef's Trust Me",
     "Special Roll",
   ];

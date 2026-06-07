@@ -728,6 +728,9 @@ function MenuSection() {
     "Sushi & Sashimi ( Sushi 1PC / Sashimi 3PCS )",
     "Moriawase & Chef's Trust Me",
     "Special Roll",
+    "Korean & Japanese Cuisine",
+    "Kids Menu",
+    "Lunch Special",
   ];
 
   const currentData = menuData[activeTab];

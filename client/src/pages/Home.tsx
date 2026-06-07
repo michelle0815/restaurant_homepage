@@ -1108,10 +1108,13 @@ function VisitSection() {
               height: "400px",
             }}
           >
-            <MapView
-              initialCenter={{ lat: 33.1960, lng: -96.8193 }}
-              initialZoom={15}
-              onMapReady={() => {}}
+            <iframe
+              src="https://www.google.com/maps?q=5251+Panther+Creek+Pkwy+400+Frisco+TX+75033&output=embed"
+              width="100%"
+              height="400"
+              style={{ border: 0 }}
+              loading="lazy"
+              allowFullScreen
             />
           </div>
         </div>

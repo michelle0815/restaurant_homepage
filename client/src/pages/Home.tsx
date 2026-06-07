@@ -22,7 +22,7 @@ const FOOD_8 = "/images/food_8.jpg";
 const FOOD_9 = "/images/food_9.jpg";
 
 // ── Data ─────────────────────────────────────────────────────────────────────
-type MenuCategory = "Starter" | "Salad" | "Hibachi & Hot Specialties" | "Hand Roll, Regular Roll & Sides" | "Bake Roll, Roll without Rice, Deep Fried Roll & Dessert" | "Sushi Bar" | "Sushi & Sashimi ( Sushi 1PC / Sashimi 3PCS )" | "Moriawase & Chef's Trust Me" | "Special Roll";
+type MenuCategory = "Starter" | "Salad" | "Hibachi & Hot Specialties" | "Hand Roll, Regular Roll & Sides" | "Bake Roll, Roll without Rice, Deep Fried Roll & Dessert" | "Sushi Bar" | "Sushi & Sashimi ( Sushi 1PC / Sashimi 3PCS )" | "Moriawase & Chef's Trust Me" | "Special Roll" | "Korean & Japanese Cuisine" | "Kids Menu" | "Lunch Special";
 
 interface MenuItem {
   name: string;
@@ -344,6 +344,139 @@ const menuData: Record<MenuCategory, MenuCategoryData> = {
       { name: "Monster Roll", description: "Spicy tuna, baby shrimp, and avocado, topped with deep fried crabmeat and baby shrimp", price: "$17" },
       { name: "Crunchy Crunch Roll", description: "Crunchy, roasted crab, spicy tuna, topped with eel fried crabmeat, mango, and eel sauce", price: "$11" },
       { name: "Salmon Tempura Roll", description: "Crabmeat, cucumber and avocado, topped with salmon tempura, spicy tuna, mango, and eel sauce and sauce", price: "Market Price" },
+    ],
+  },
+  "Korean & Japanese Cuisine": {
+        items: [
+          { 
+            name: "Bulgogi", 
+            description: "Thinly sliced beef ribeye marinated in traditional Korean-style onion and cabbage, served with steamed rice", 
+            price: "$30" 
+          },
+          { 
+            name: "Chicken Bulgogi", 
+            description: "Thinly sliced chicken marinated in traditional Korean-style onion and cabbage, served with steamed rice", 
+            price: "$23" 
+          },
+          { 
+            name: "Hot Stone Bowl", 
+            description: "Variety of vegetables and rice served in a hot stone bowl, topped with a fried egg with Korean spicy sauce. *Add Chicken 5/ Bulgogi (Beef) 7/ Spicy Pork Bulgogi 6/Shrimp 7/Tofu 5", 
+            price: "$15" 
+          },
+          { 
+            name: "Spicy Pork Bulgogi", 
+            description: "Thinly sliced pork marinated in a traditional Korean spicy sauce with onion and cabbage, served with steamed rice", 
+            price: "$27" 
+          },
+          { 
+            name: "BBQ Short Ribs (Kalbi)", 
+            description: "Perfectly marinated Korean-style cross-cut grilled beef short ribs with onion and cabbage, served with steamed rice", 
+            price: "$36" 
+          },
+          { 
+            name: "Kimchi Fried Rice", 
+            description: "Stir-fried rice with spicy Korean kimchi, fresh vegetables, a fried egg and melted cheese. *Add Chicken 5/Beef 6/Shrimp 7/Tofu 5", 
+            price: "$14" 
+          },
+          { 
+            name: "Fried Rice", 
+            description: "Stir-fried rice with fresh vegetables and egg. *Add Chicken 5/ Beef 6/Shrimp 7/Tofu 5", 
+            price: "$11" 
+          },
+          { 
+            name: "Tonkatsu", 
+            description: "Crispy pork cutlet served with steamed rice, shredded cabbage, and tonkatsu sauce", 
+            price: "$16" 
+          },
+          { 
+            name: "Chicken Katsu", 
+            description: "Crispy chicken cutlet served with steamed rice, shredded cabbage, and katsu sauce", 
+            price: "$16" 
+          },
+          { 
+            name: "Pork Cutlet Curry Rice", 
+            description: "Crispy pork cutlet served with steamed rice and Japanese curry", 
+            price: "$18" 
+          },
+          { 
+            name: "Chicken Curry Rice", 
+            description: "Crispy chicken cutlet served with steamed rice and Japanese curry", 
+            price: "$18" 
+          },
+          { 
+            name: "Jumbo Shrimp Katsu (Kame Signature)", 
+            description: "Crispy cutlet made with 100% Black Tiger shrimp", 
+            price: "$29" 
+          }
+        ],
+      },
+  "Kids Menu": {
+        items: [
+          { 
+            name: "Chicken Teriyaki Don", 
+            description: "Rice bowl topped with chicken teriyaki and teriyaki sauce.", 
+            price: "$12" 
+          },
+          { 
+            name: "Kara-A-Ge Don", 
+            description: "Rice bowl topped with chicken kara-a-ge and kara-a-ge sauce.", 
+            price: "$12" 
+          }
+        ],
+  },
+  "Lunch Special": {
+    sections: [
+      {
+        title: "Mon ~ Fri, 11AM ~ 3PM",
+        description: "Served with miso, california roll (4 pcs), fried dumplings (2 pcs), steamed rice, and salad with ginger dressing. Fried rice substitute +3",
+        items: [
+          {
+            name: "Sushi Bento",
+            description: "5pcs of Chef's choice sushi. Served with miso, california roll (4 pcs), fried dumplings (2 pcs), steamed rice, and salad with ginger dressing. Fried rice substitute +3",
+            price: "$17"
+          },
+          {
+            name: "Sashimi Bento",
+            description: "5pcs of Chef's choice sashimi. Served with miso, california roll (4 pcs), fried dumplings (2 pcs), steamed rice, and salad with ginger dressing. Fried rice substitute +3",
+            price: "$19"
+          },
+          {
+            name: "Sushi & Sashimi Bento",
+            description: "5 pcs Chef's choice sushi and 4 pcs sashimi. Served with miso, california roll (4 pcs), fried dumplings (2 pcs), steamed rice, and salad with ginger dressing. Fried rice substitute +3",
+            price: "$23"
+          },
+          {
+            name: "Unagi Bento",
+            description: "5 pcs of eel. Served with miso, california roll (4 pcs), fried dumplings (2 pcs), steamed rice, and salad with ginger dressing. Fried rice substitute +3",
+            price: "$23"
+          },
+          {
+            name: "Chicken Teriyaki Bento (Spicy +1)",
+            description: "Grilled chicken with teriyaki sauce and fresh vegetables. Served with miso, california roll (4 pcs), fried dumplings (2 pcs), steamed rice, and salad with ginger dressing. Fried rice substitute +3",
+            price: "$16"
+          },
+          {
+            name: "Salmon Teriyaki Bento",
+            description: "Grilled salmon with teriyaki sauce and fresh vegetables. Served with miso, california roll (4 pcs), fried dumplings (2 pcs), steamed rice, and salad with ginger dressing. Fried rice substitute +3",
+            price: "$18"
+          },
+          {
+            name: "BBQ Short Ribs Bento",
+            description: "Marinated short rib grilled with a flavorful Korean BBQ sauce. Served with miso, california roll (4 pcs), fried dumplings (2 pcs), steamed rice, and salad with ginger dressing. Fried rice substitute +3",
+            price: "$23"
+          },
+          {
+            name: "Bulgogi Bento",
+            description: "Thinly sliced ribeye beef marinated in a savory Korean-style sauce. Served with miso, california roll (4 pcs), fried dumplings (2 pcs), steamed rice, and salad with ginger dressing. Fried rice substitute +3",
+            price: "$18"
+          },
+          {
+            name: "Spicy Pork Bulgogi Bento",
+            description: "Thinly sliced pork marinated in a savory, spicy Korean-style sauce. Served with miso, california roll (4 pcs), fried dumplings (2 pcs), steamed rice, and salad with ginger dressing. Fried rice substitute +3",
+            price: "$17"
+          }
+        ],
+      },
     ],
   },
 };

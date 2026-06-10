@@ -7,7 +7,6 @@
 
 import { useState, useEffect, useRef } from "react";
 import { MapPin, Phone, Clock, ChevronDown, Menu, X, Instagram } from "lucide-react";
-import { MapView } from "@/components/Map";
 
 // ── Image URLs ──────────────────────────────────────────────────────────────
 const KAME_LOGO = "/images/kame_logo.jpg";
@@ -20,8 +19,6 @@ const SASHIMI_PLATE = "/images/food_6.jpg";
 const FOOD_7 = "/images/food_7.jpg";
 const FOOD_8 = "/images/food_8.jpg";
 const FOOD_9 = "/images/food_9.jpg";
-const KAME_ADDRESS = "5251 Panther Creek Pkwy #400, Frisco, TX 75033";
-const KAME_LOCATION = { lat: 33.1924, lng: -96.8402 };
 
 // ── Data ─────────────────────────────────────────────────────────────────────
 type MenuCategory = "Starter" | "Salad" | "Hibachi & Hot Specialties" | "Hand Roll, Regular Roll & Sides" | "Bake Roll, Roll without Rice, Deep Fried Roll & Dessert" | "Sushi Bar" | "Sushi & Sashimi ( Sushi 1PC / Sashimi 3PCS )" | "Moriawase & Chef's Trust Me" | "Special Roll" | "Korean & Japanese Cuisine" | "Kids Menu" | "Lunch Special";
@@ -967,35 +964,6 @@ function GallerySection() {
 
 function VisitSection() {
   const { ref, inView } = useInView();
-  const handleMapReady = (map: google.maps.Map) => {
-    const googleMaps = window.google?.maps;
-
-    if (!googleMaps) {
-      return;
-    }
-
-    const setMarker = (position: google.maps.LatLng | google.maps.LatLngLiteral) => {
-      map.setCenter(position);
-
-      new googleMaps.marker.AdvancedMarkerElement({
-        map,
-        position,
-        title: "Kame Sushi",
-      });
-    };
-
-    const geocoder = new googleMaps.Geocoder();
-    geocoder.geocode({ address: KAME_ADDRESS }, (results, status) => {
-      const location = results?.[0]?.geometry.location;
-
-      if (status === googleMaps.GeocoderStatus.OK && location) {
-        setMarker(location);
-        return;
-      }
-
-      setMarker(KAME_LOCATION);
-    });
-  };
 
   return (
     <section
@@ -1131,19 +1099,21 @@ function VisitSection() {
             </div>
           </div>
 
-          {/* Map */}
+          {/* Desktop Map */}
           <div
-            className="rounded-lg overflow-hidden"
+            className="hidden md:block rounded-lg overflow-hidden"
             style={{
               border: "1px solid oklch(1 0 0 / 10%)",
               height: "400px",
             }}
           >
-            <MapView
-              className="h-full min-h-0"
-              initialCenter={KAME_LOCATION}
-              initialZoom={15}
-              onMapReady={handleMapReady}
+            <iframe
+              src="https://www.google.com/maps?q=5251+Panther+Creek+Pkwy+400+Frisco+TX+75033&output=embed"
+              width="100%"
+              height="400"
+              style={{ border: 0 }}
+              loading="lazy"
+              allowFullScreen
             />
           </div>
         </div>

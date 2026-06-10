@@ -19,7 +19,6 @@ const SASHIMI_PLATE = "/images/food_6.jpg";
 const FOOD_7 = "/images/food_7.jpg";
 const FOOD_8 = "/images/food_8.jpg";
 const FOOD_9 = "/images/food_9.jpg";
-const FOOD_10 = "/images/food_10.jpg";
 
 // ── Data ─────────────────────────────────────────────────────────────────────
 type MenuCategory = "Starter" | "Salad" | "Hibachi & Hot Specialties" | "Hand Roll, Regular Roll & Sides" | "Bake Roll, Roll without Rice, Deep Fried Roll & Dessert" | "Sushi Bar" | "Sushi & Sashimi ( Sushi 1PC / Sashimi 3PCS )" | "Moriawase & Chef's Trust Me" | "Special Roll" | "Korean & Japanese Cuisine" | "Kids Menu" | "Lunch Special";
@@ -618,6 +617,17 @@ function Navbar() {
         .nav-link:hover::after {
           width: 100%;
         }
+        img[src="/images/kame_logo.jpg"] {
+          width: 6rem;
+          height: 6rem;
+          object-fit: contain;
+        }
+        @media (min-width: 768px) {
+          img[src="/images/kame_logo.jpg"] {
+            width: 8rem;
+            height: 8rem;
+          }
+        }
       `}</style>
     </nav>
   );
@@ -918,7 +928,7 @@ function GallerySection() {
     FOOD_7,
     FOOD_8,
     FOOD_9,
-    FOOD_10,
+    HERO_IMG,
   ];
 
   return (

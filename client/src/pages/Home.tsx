@@ -19,6 +19,7 @@ const SASHIMI_PLATE = "/images/food_6.jpg";
 const FOOD_7 = "/images/food_7.jpg";
 const FOOD_8 = "/images/food_8.jpg";
 const FOOD_9 = "/images/food_9.jpg";
+const FOOD_10 = "/images/food_10.jpg";
 
 // ── Data ─────────────────────────────────────────────────────────────────────
 type MenuCategory = "Starter" | "Salad" | "Hibachi & Hot Specialties" | "Hand Roll, Regular Roll & Sides" | "Bake Roll, Roll without Rice, Deep Fried Roll & Dessert" | "Sushi Bar" | "Sushi & Sashimi ( Sushi 1PC / Sashimi 3PCS )" | "Moriawase & Chef's Trust Me" | "Special Roll" | "Korean & Japanese Cuisine" | "Kids Menu" | "Lunch Special";
@@ -908,7 +909,17 @@ function MenuSection() {
 
 function GallerySection() {
   const { ref, inView } = useInView();
-  const images = [SUSHI_PLATTER, SUSHI_TOWER, SASHIMI_PLATE, INTERIOR_DINING, SAKE_COCKTAILS, FOOD_7, FOOD_8, FOOD_9];
+  const images = [
+    SUSHI_PLATTER,
+    SUSHI_TOWER,
+    SASHIMI_PLATE,
+    INTERIOR_DINING,
+    SAKE_COCKTAILS,
+    FOOD_7,
+    FOOD_8,
+    FOOD_9,
+    FOOD_10,
+  ];
 
   return (
     <section
